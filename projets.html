@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="A datavisualization tool that leads you from your data to the graphic you need." content="">
+    <meta name="Mandir DIOP" content="">
+
+    <title>Projets</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/logo/mandir_log.ico">
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- THIS ALLOWS TO INSERT THE MENU THAT IS STORED IN A MENU.HTML FILE-->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav"></nav>
+    <script>
+      $(function(){
+        $("#mainNav").load("menu.html");
+      });
+    </script>
+
+<!-- --------------------------- PROJET SECTION ------------------------------------------------------------------- -->
+
+  <section id="caveats">
+  <div class="container">
+
+    <!-- Titre de la section -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br>
+        <h2 class="section-heading text-uppercase">Mes Projets</h2>
+
+        <p class="text-muted" style="max-width: 700px; margin: 10px auto 25px;">
+          De l'exploration des données à la création de visualisations claires et impactantes, 
+          voici un aperçu des projets que j'ai réalisés au cours de mon parcours.
+        </p>
+        <br><br>
+
+        <!-- Boutons de filtrage -->
+        <div id="myBtnContainer">
+          <button class="btn btn-secondary active" onclick="filterSelection('all')">Tous les projets</button>
+          <button class="btn btn-secondary" onclick="filterSelection('Machine-Learning')">Machine Learning</button>
+          <button class="btn btn-secondary" onclick="filterSelection('Visualisation')">Visualisation</button>
+        </div>
+
+        <br>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- PROJET 1 : Machine Learning - kNN -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Machine-Learning">
+        <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
+          <img src="projet/Image_projets/BUT3/datamining.png" 
+               alt="Machine Learning kNN"
+               width="200" height="120">
+          
+          <div class="social-icons" style="margin-top: 12px;">
+            <a href="projet/datamining.html" target="_blank" class="icon-container edit">
+              <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
+              </svg>
+            </a>
+            
+            <a href="https://github.com/Mandir24/knn-model-selection-datamining" target="_blank" class="icon-container github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+          </div>
+          
+          <p class="mytitlerelated mt-2">Paramétrage d'une méthode des plus proches voisins (kNN)</p>
+          <p class="mytextrelated">Détermination de k optimal.</p>
+        </div>
+      </div>
+
+      <!-- PROJET 2 : Visualisation - Matières premières -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
+          <img src="projet/Image_projets/BUT2/matieres_premieres.png" 
+              alt="Analyse séries temporelles - Matières premières"
+              width="200" height="120">
+          
+          <div class="social-icons" style="margin-top: 12px;">
+            <a href="projet/cotation.html" class="icon-container edit">
+              <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
+              </svg>
+            </a>
+            
+            <a href="https://github.com/Mandir24/Etude_des_cotations" target="_blank" class="icon-container github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+          </div>
+          
+          <p class="mytitlerelated mt-2">Étude des cotations de matières premières</p>
+          <p class="mytextrelated">Modélisation du pétrole Brent avec régression linéaire par morceaux.</p>
+        </div>
+      </div>
+
+      <!-- PROJET 3 : Visualisation - EcoDashboard -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
+          <img src="projet/Image_projets/BUT2/economie_mondiale.webp"
+              alt="EcoDashboard – Analyse de l'économie mondiale"
+              width="200" height="120">
+
+          <div class="social-icons" style="margin-top: 12px; display: flex; justify-content: center; gap: 15px;">
+            <a href="projet/economique_dashboard.html" class="icon-container edit" title="Voir le projet">
+              <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512"
+                  height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://github.com/Mandir24/EcoDashboard-Global-Analytics" class="icon-container github" title="Voir le code sur GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                  width="20" height="20" fill="black" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+          </div>
+
+          <p class="mytitlerelated mt-2">EcoDashboard</p>
+          <p class="mytextrelated">Tableau de bord interactif pour analyser et comparer les indicateurs économiques mondiaux.</p>
+        </div>
+      </div>
+
+      <!-- PROJET 4 : Visualisation - BourseTrack -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
+          <img src="projet/Image_projets/BUT2/image_bourse_track.webp"
+              alt="BourseTrack – Analyse Financière et Tendance des Actions"
+              width="200" height="120">
+
+          <div class="social-icons" style="margin-top: 12px; display: flex; justify-content: center; gap: 15px;">
+            <a href="projet/bourse_track.html" class="icon-container edit" title="Voir le projet">
+              <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512"
+                  height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
+              </svg>
+            </a>
+
+            <a href="https://github.com/Mandir24/BourseTrack" class="icon-container github" title="Voir le code sur GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                  width="20" height="20" fill="black" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+          </div>
+
+          <p class="mytitlerelated mt-2">BourseTrack</p>
+          <p class="mytextrelated">Analyse automatisée des performances boursières (100 jours) via APIs et SQLite.</p>
+        </div>
+      </div>
+
+      <!-- PROJET 5 : Visualisation - Cut Y Axis -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/cut_y_axis.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/cut_y_axis.png">
+          <p class="mytitlerelated">To cut or not to cut?</p>
+          <p class="mytextrelated">Cutting the Y-axis is one of the most controversial practice in data viz. See why.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 6 : Visualisation - Spaghetti -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/spaghetti.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/spaghetti.png">
+          <p class="mytitlerelated">The spaghetti chart</p>
+          <p class="mytextrelated">A line graph with too many lines becomes unreadable: it is called a spaghetti graph.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 7 : Visualisation - Pie Chart -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/pie.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/pie.png">
+          <p class="mytitlerelated">Pie chart</p>
+          <p class="mytextrelated">The human eye is bad at reading angles. See how to replace the most criticized chart ever.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 8 : Visualisation - Bin Size -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/bin_size.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/bin_size.png">
+          <p class="mytitlerelated">Play with histogram bin size</p>
+          <p class="mytextrelated">Always try different bin sizes when you build a histogram, it can lead to different insights.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 9 : Visualisation - Boxplot -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/boxplot.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/boxplot.png">
+          <p class="mytitlerelated">Do boxplots hide information?</p>
+          <p class="mytextrelated">Boxplots are a great way to summarize a distribution but hide the sample size and their distribution.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 10 : Visualisation - Error Bar -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/error_bar.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/error_bar.png">
+          <p class="mytitlerelated">The problem with error bars</p>
+          <p class="mytextrelated">Barplots with error bars must be used with great care. See why and how to replace them.</p>
+        </a>
+      </div>
+
+      <!-- PROJET 11 : Visualisation - Multi Distribution -->
+      <div class="col-lg-3 col-md-6 col-sm-6 text-center column Visualisation">
+        <a href="caveat/multi_distribution.html" class="btn btn-primary mybtnrelated" style="margin-bottom:4px;white-space: normal !important;">
+          <img src="img/mistake/multi_distribution.png">
+          <p class="mytitlerelated">Too many distributions.</p>
+          <p class="mytextrelated">If you need to compare the distributions of many variables, don't clutter your graphic.</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- --------------------------------------------------------------------------------------------- -->
+
+<!-- ======================= FOOTER SECTION ================================ -->
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================================================================= -->
+
+<script>
+// --------------------------------------------------------------------------------------------------------------------------------- //
+// A script to select charts based on their tag //
+// --------------------------------------------------------------------------------------------------------------------------------- //
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+// --------------------------------------------------------------------------------------------------------------------------------- //
+</script>
+
+<!-- ------------------------ JAVASCRIPT SECTION ----------------------------- -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+	$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	})
+	</script>
+
+    <!-- Script for animated portfolio with filter. Found here: https://codepen.io/pramodkumarboda/pen/XdgxmQ -->
+    <script>
+  	$(window).load(function(){
+  	    var $container = $('.portfolioContainer');
+  	    $container.isotope({
+  	        filter: '*',
+  	        animationOptions: {
+  	            duration: 750,
+  	            easing: 'linear',
+  	            queue: false
+  	        }
+  	    });
+
+  	    $('.portfolioFilter a').click(function(){
+  	        $('.portfolioFilter .current').removeClass('current');
+  	        $(this).addClass('current');
+
+  	        var selector = $(this).attr('data-filter');
+  	        $container.isotope({
+  	            filter: selector,
+  	            animationOptions: {
+  	                duration: 750,
+  	                easing: 'linear',
+  	                queue: false
+  	            }
+  	         });
+  	         return false;
+  	    });
+  	});
+	</script>
+
+
+
+
+
+    <!-- Script to give a specific URL to every Modal. TODO: improve it with https://stackoverflow.com/questions/34154370/bootstrap-3-x-how-to-have-url-change-upon-clicking-modal-trigger -->
+    <script>
+      $(document).ready(function(){
+        $(window.location.hash).modal('show');
+        $('a[data-toggle="modal"]').click(function(){
+           window.location.hash = $(this).attr('href');
+        });
+      });
+
+      $('button[data-dismiss="modal"]').click(function(){
+           var original = window.location.href.substr(0, window.location.href.indexOf('#'))
+           history.replaceState({}, document.title, original);
+       });
+
+      $(window.location.hash).modal('show');
+      $('a[data-toggle="modal"]').click(function(){
+          window.location.hash = $(this).attr('href');
+      });
+
+      function revertToOriginalURL() {
+          var original = window.location.href.substr(0, window.location.href.indexOf('#'))
+          history.replaceState({}, document.title, original);
+      }
+
+      $('.modal').on('hidden.bs.modal', function () {
+          revertToOriginalURL();
+      });
+
+  </script>
+
+
+  <script>
+    $('.tip').each(function () {
+      $(this).tooltip(
+      {
+        html: true,
+          title: $('#' + $(this).data('tip')).html()
+      });
+    });
+  </script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79254642-3');
+</script>
+<script>
+var getOutboundLink = function(url) {
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': url,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+</script>
+
+
+<!----------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+  </body>
+
+</html>

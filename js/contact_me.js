@@ -1,75 +1,54 @@
-$(function() {
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const successAlert = document.getElementById("successAlert");
+  const errorAlert = document.getElementById("errorAlert");
+  const spinner = document.getElementById("loadingSpinner");
 
-  $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
-    preventSubmit: true,
-    submitError: function($form, event, errors) {
-      // additional error messages or events
-    },
-    submitSuccess: function($form, event) {
-      event.preventDefault(); // prevent default submit behaviour
-      // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
-      // Check for white space in name for Success/Fail message
-      if (firstName.indexOf(' ') >= 0) {
-        firstName = name.split(' ').slice(0, -1).join(' ');
-      }
-      $this = $("#sendMessageButton");
-      $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-      $.ajax({
-        url: "././mail/contact_me.php",
-        type: "POST",
-        data: {
-          name: name,
-          phone: phone,
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    // Récupération des valeurs du formulaire
+    const prenom = document.getElementById("prenom").value.trim();
+    const nom = document.getElementById("nom").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Afficher le spinner
+    spinner.classList.remove("d-none");
+
+    try {
+      // ⚠️ Remplace le lien ci-dessous par TON lien Formspree
+      const response = await fetch("https://formspree.io/f/mqawzrlq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prenom: prenom,
+          nom: nom,
           email: email,
-          message: message
-        },
-        cache: false,
-        success: function() {
-          // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
-          $('#success > .alert-success')
-            .append('</div>');
-          //clear all fields
-          $('#contactForm').trigger("reset");
-        },
-        error: function() {
-          // Fail message
-          $('#success').html("<div class='alert alert-danger'>");
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
-          $('#success > .alert-danger').append('</div>');
-          //clear all fields
-          $('#contactForm').trigger("reset");
-        },
-        complete: function() {
-          setTimeout(function() {
-            $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
-          }, 1000);
-        }
+          message: message,
+        }),
       });
-    },
-    filter: function() {
-      return $(this).is(":visible");
-    },
-  });
 
-  $("a[data-toggle=\"tab\"]").click(function(e) {
-    e.preventDefault();
-    $(this).tab("show");
+      if (response.ok) {
+        // Succès : afficher le message vert
+        successAlert.classList.remove("d-none");
+        errorAlert.classList.add("d-none");
+        form.reset();
+      } else {
+        // Erreur : afficher le message rouge
+        successAlert.classList.add("d-none");
+        errorAlert.classList.remove("d-none");
+      }
+    } catch (error) {
+      // Erreur réseau
+      successAlert.classList.add("d-none");
+      errorAlert.classList.remove("d-none");
+      console.error("Erreur d’envoi :", error);
+    } finally {
+      // Cacher le spinner après traitement
+      spinner.classList.add("d-none");
+    }
   });
-});
-
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-  $('#success').html('');
 });

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BourseTrack – Analyse Financière et Tendance des Actions (SAÉ) | Portfolio</title>
+    
+    <meta name="description" content="Projet BourseTrack (SAÉ 3.VCOD.01) : Analyse automatisée des performances boursières sur 100 jours via Alpha Vantage et News API, avec pipeline de données Python et stockage SQLite.">
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet"> 
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <style>
+        /* Conteneur principal */
+        .project-content {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        /* Image avec effet de survol */
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .project-img:hover {
+            transform: scale(1.01);
+        }
+        @media (max-width: 992px) {
+            .project-img { max-width: 80%; margin: auto; display: block; }
+        }
+        /* Séparateur minimaliste */
+        .section-divider {
+            height: 3px;
+            background: #4477f0; 
+            border-radius: 5px;
+            margin: 15px auto 40px auto;
+            max-width: 120px;
+            opacity: 0.8;
+        }
+        /* Badges personnalisés */
+            </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target="#mainNav" style="padding-top: 90px;">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html"); 
+  });
+</script>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+
+            <header class="text-center mb-5">
+                <h1 class="text-uppercase fw-bolder mb-3">BourseTrack — Analyse Financière et Tendance des Actions</h1>
+                <hr class="section-divider">
+                <p class="mx-auto lead text-muted" style="max-width: 800px;">
+                    Projet de Collecte automatisée de données web (SAÉ 3.VCOD.01), visant à analyser et rapporter les performances boursières sur les **100 derniers jours** pour les titres majeurs.
+                </p>
+            </header>
+
+            <div class="text-center mb-5">
+                <span class="badge badge-python">Python</span>
+                <span class="badge badge-api">Alpha Vantage API</span>
+                <span class="badge badge-api">News API</span>
+                <span class="badge badge-sqlite">SQLite</span>
+                <span class="badge badge-dataviz">Matplotlib/Seaborn</span>
+            </div>
+
+            <div class="text-center mb-5">
+                <img src="Image_projets/BUT2/extrait_Bourstrack .png"
+                     class="img-fluid rounded shadow project-img"
+                     style="max-width: 700px;"
+                     alt="Capture d'écran du rapport financier HTML généré par le script Python BourseTrack.">
+                <p class="text-muted mt-3">Extrait du rapport HTML final (Tableau et Actualités)</p>
+            </div>
+
+            <div class="project-content">
+
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary"> Contexte et Objectifs (SAÉ)</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #4477f0;">
+                    <p>
+                        Ce projet répond aux exigences de la SAÉ 3.VCOD.01 du Semestre 3, dont l'objectif est de développer une plateforme simple permettant le suivi des performances financières des entreprises sur les **100 derniers jours ouvrés**. 
+                        L'analyse combine des indicateurs financiers précis et la contextualisation par les actualités pertinentes. L'approche technique repose sur l'utilisation de <strong>Python</strong> et l'<strong>orientée objet </strong> pour la collecte, le nettoyage et le stockage des données.
+                    </p>
+                    <h5 class="fw-bold fs-5 mt-4">Indicateurs Clés Calculés :</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-line-chart text-success me-2"></i> <b>Tendance Globale</b> : Différence entre le prix moyen de clôture et d'ouverture.</li>
+                        <li><i class="fa fa-exchange text-success me-2"></i> <b>Volatilité Moyenne</b> : Moyenne des écarts entre les prix haut et bas.</li>
+                        <li><i class="fa fa-percent text-success me-2"></i> <b>Rendement Moyen Journalier</b> : Moyenne des variations journalières en pourcentage.</li>
+                    </ul>
+                </article>
+
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary"> Pipeline de Données et Architecture</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #4477f0;">
+                    <p>Le traitement des données suit un pipeline rigoureux, garantissant la fiabilité et le respect des limites d'accès aux APIs :</p>
+                    <ol>
+                        <li><b>Extraction via APIs</b> : Les données financières (prix d'ouverture/fermeture, volume) sont récupérées via l'<b>API Alpha Vantage</b>, et les actualités (titre, description, URL) via <b>News API</b>.</li>
+                        <li><b>Sauvegarde Locale (CSV)</b> : Pour gérer les contraintes de requêtes (rate limiting), les informations collectées sont stockées dans des <b>fichiers CSV distincts</b> (ex: `symbole_financial.csv`).</li>
+                        <li><b>Nettoyage et Stockage (SQLite)</b> : Après le nettoyage des données, celles-ci sont insérées dans une base de données relationnelle <b>SQLite</b>, en s'appuyant sur un <b>Modèle Relationnel de Données (MLD)</b>. Des classes `GestionnaireBDD` et `GestionnaireFichier` assurent l'architecture orientée objet.</li>
+                        <li><b>Génération du Rapport HTML</b> : Les données traitées, les indicateurs calculés et les actualités filtrées sont récupérés de la base de données via des <b>requêtes SQL</b>. Ces résultats sont ensuite utilisés pour générer le rapport final en HTML/CSS.</li>
+                    </ol>
+                </article>
+                
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary"> Rapport et Visualisations</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #4477f0;">
+                    <p>Le résultat est un rapport HTML dynamique qui inclut :</p>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="fw-bold fs-5">Synthèse des Performances</h5>
+                            <ul>
+                                <li><b>Tableau Analytique</b> : Présentation des indicateurs financiers avec une différenciation visuelle par CSS selon la tendance (positive/négative).</li>
+                                <li><b>Visualisation des Volumes</b> : Un graphique circulaire (Pie Chart) illustre la répartition du <b>Volume total des échanges</b> par entreprise, généré via Matplotlib/Seaborn.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="fw-bold fs-5">Contextualisation</h5>
+                            <ul>
+                                <li><b>Actualités Filtrées</b> : Seules les actualités des entreprises ayant une **Tendance Globale $\ge 0.15$ ou $\le -0.15$** sont affichées pour cibler les mouvements significatifs du marché.</li>
+                                <li><b>Base de Données</b> : La structure SQLite (tables `ENTREPRISE`, `FINANCIER`, `ACTUALITE`) garantit la persistance et l'intégrité des données.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="text-center">
+                    <a href="https://github.com/Mandir24/BourseTrack"
+                    class="btn btn-outline-dark mx-2" target="_blank">
+                    <i class="fa fa-github me-2"></i> Code
+                    </a>
+
+                    <a href="../img/poster_m/Bourse_Track.pdf"
+                    class="btn btn-outline-danger mx-2" target="_blank">
+                    <i class="fa fa-file-pdf-o me-2"></i> Poster
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

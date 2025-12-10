@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projet Data Mining : Paramétrage et optimisation de l'algorithme k-Nearest Neighbors (kNN) avec GridSearchCV">
+    <meta name="author" content="Mandir DIOP">
+    <title>Projet k-NN - Neighbors</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../img/logo/mandir_log.ico">
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/agency.css" rel="stylesheet">
+    
+    <!-- JQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+  </head>
+  
+<body id="page-top" style="padding-top: 90px;"> <!-- Pour éviter que la navbar cache le texte -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html");
+  });
+</script>
+
+<style>
+  /* Style normal (grand écran) */
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  /* Écran moyen (< 992px) : images réduites */
+  @media (max-width: 992px) {
+    .project-img {
+      max-width: 70%;  /* image plus petite mais centrée */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* Écran petit (< 768px) : images 100% largeur */
+  @media (max-width: 768px) {
+    .project-img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+
+<!-- ========================== SECTION PROJET K-NN =========================== -->
+<section id="projet-knn" class="py-5">
+  <div class="container">
+
+    <!-- TITRE -->
+    <h2 class="text-center text-uppercase fw-bold">Optimisation de k-Nearest Neighbors (k-NN)</h2>
+    <hr class="section-divider">
+
+    <!-- BADGES -->
+    <div class="text-center mb-4">
+      <span class="badge bg-primary mx-">k-NN</span>
+      <span class="badge bg-success mx-1">GridSearchCV</span>
+      <span class="badge bg-info text-dark mx-1">Validation croisée</span>
+      <span class="badge bg-warning text-dark mx-1">Optimisation</span>
+      <span class="badge bg-secondary mx-1">Python</span>
+      <span class="badge bg-danger mx-1">Scikit-learn</span>
+    </div>
+
+    <!-- IMAGE PRINCIPALE -->
+    <div class="text-center mb-5">
+     
+<img src="Image_projets/BUT3/datamining.png" 
+     class="img-fluid rounded shadow project-img"
+     style="max-width: 400px;">
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="mx-auto" style="max-width: 950px;">
+
+      <!-- CONTEXTE -->
+      <h4 class="fw-bold">Contexte</h4>
+      <hr class="section-divider">
+      <p>
+        Ce projet, réalisé dans le cadre du BUT Science des Données (Université de Caen, 2025-2026),
+        vise à optimiser l'algorithme <strong>k-Nearest Neighbors</strong> appliqué au dataset
+        <strong>Breast Cancer Wisconsin</strong>.  
+        L’objectif principal est d’identifier la configuration de paramètres offrant la meilleure précision.
+      </p>
+
+      <!-- OBJECTIFS -->
+      <h4 class="fw-bold mt-4">Objectifs du projet</h4>
+      <hr class="section-divider">
+      <ul>
+        <li>Comprendre les hyperparamètres de k-NN</li>
+        <li>Analyser le compromis <strong>biais-variance</strong></li>
+        <li>Optimiser le modèle via <strong>GridSearchCV</strong> et <strong>RandomizedSearchCV</strong></li>
+        <li>Produire des visualisations (heatmaps, courbes)</li>
+      </ul>
+
+      <!-- MÉTHODOLOGIE -->
+      <h4 class="fw-bold mt-4">Méthodologie</h4>
+      <hr class="section-divider">
+      <ol>
+        <li>Nettoyage et exploration du dataset</li>
+        <li>Établissement d’un modèle baseline (95.6%)</li>
+        <li>Étude de l’impact du paramètre <strong>k</strong></li>
+        <li>Recherche exhaustive via GridSearchCV</li>
+        <li>Comparaison avec RandomizedSearchCV</li>
+        <li>Évaluation finale sur données de test</li>
+      </ol>
+
+      <!-- RESULTATS -->
+      <h4 class="fw-bold mt-4">Résultats</h4>
+      <hr class="section-divider">
+
+      <p>
+        L’optimisation du modèle <strong>K‐NN</strong> a été réalisée à l’aide de la fonction GridSearchCV de la bibliothèque sklearn. Cette méth‐
+        ode permet de tester automatiquement plusieurs combinaisons
+        d’hyperparamètres afin de trouver celle qui maximise la performance moyenne mesurée par validation croisée.
+        
+      </p>
+      <ul>
+        <li><strong>Modèle de base :</strong> 95.6%</li>
+        <li><strong>Modèle optimisé :</strong> 98.2%</li>
+      </ul>
+
+      <!-- IMAGE DES RÉSULTATS (PROVENANT DE TON POSTER) -->
+      <div class="text-center my-4">
+        <img src="Image_projets/BUT3/comparaison_finale.png" 
+     class="img-fluid rounded shadow project-img">
+        <p class="text-muted mt-2"><small>Visualisation extraite du poster — comparaison avant/après optimisation.</small></p>
+      </div>
+
+      <!-- TECHNOLOGIES -->
+      <h4 class="fw-bold mt-4">Technologies utilisées</h4>
+      <hr class="section-divider">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li>Python</li>
+            <li>Scikit-learn</li>
+            <li>NumPy, Pandas</li>
+            <li>Matplotlib, Seaborn</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Jupyter Notebook</li>
+            <li>Git & GitHub</li>
+            <li>LaTeX (Poster scientifique)</li>
+            <li>PowerPoint</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LIVRABLES -->
+    
+
+      <!-- CODE / POSTER / PDF SECTION -->
+   
+      <div class="text-center">
+        <a href="https://github.com/Mandir24/knn-model-selection-datamining"
+           class="btn btn-outline-dark mx-2" target="_blank">
+          <i class="fa fa-github me-2"></i> Code
+        </a>
+
+        <a href="../img/poster_m/poster_datamining.pdf"
+           class="btn btn-outline-danger mx-2" target="_blank">
+          <i class="fa fa-file-pdf-o me-2"></i> Poster
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Style pour traits sous les titres -->
+<style>
+  .section-divider {
+    border: 0;
+    height: 2px;
+    background: #ddd;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+</style>
+
+</body>
+
+</html>

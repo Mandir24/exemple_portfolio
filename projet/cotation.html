@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projet Analyse de séries temporelles : Étude des cotations de matières premières et modélisation du prix du pétrole Brent">
+    <meta name="author" content="Mandir DIOP">
+    <title>Projet Séries Temporelles</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../img/logo/mandir_log.ico">
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/agency.css" rel="stylesheet">
+    
+    <!-- JQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+  </head>
+
+<body id="page-top" style="padding-top: 90px;">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav"></nav>
+<script>
+$(function(){
+  $("#mainNav").load("../menu_projet.html");
+});
+</script>
+
+        <!-- STYLE SPÉCIAL POUR LES BOUTONS LORSQUE LA FENÊTRE DIMINUE -->
+<style>
+  /* Style normal (grand écran) */
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  /* Écran moyen (< 992px) : images réduites */
+  @media (max-width: 992px) {
+    .project-img {
+      max-width: 70%;  /* image plus petite mais centrée */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* Écran petit (< 768px) : images 100% largeur */
+  @media (max-width: 768px) {
+    .project-img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+<!-- ========================== SECTION PROJET SÉRIES TEMPORELLES =========================== -->
+<section id="projet-series-temporelles" class="py-5">
+  <div class="container">
+    
+    <!-- TITRE -->
+    <h2 class="text-center text-uppercase fw-bold">Analyse de Séries Temporelles</h2>
+    <h5 class="text-center text-muted mb-4">Étude des cotations de matières premières</h5>
+    <hr class="section-divider">
+    
+    <!-- BADGES -->
+    <div class="text-center mb-4">
+      <span class="badge bg-primary mx-1">Séries Temporelles</span>
+      <span class="badge bg-success mx-1">R</span>
+      <span class="badge bg-info text-dark mx-1">Régression</span>
+      <span class="badge bg-warning text-dark mx-1">Modélisation</span>
+      <span class="badge bg-secondary mx-1">tidyverse</span>
+      <span class="badge bg-danger mx-1">ggplot2</span>
+    </div>
+
+    <div class="text-center mb-5">
+      <img src="Image_projets/BUT2/matieres_premieres.png" 
+     class="img-fluid rounded shadow project-img"
+     style="max-width: 600px;">
+
+      
+    </div>
+    
+    <!-- IMAGE PRINCIPALE (graphique du pétrole Brent) -->
+    
+    
+    <!-- CONTENU -->
+    <div class="mx-auto" style="max-width: 950px;">
+      
+      <!-- CONTEXTE -->
+      <h4 class="fw-bold">Contexte</h4>
+      <hr class="section-divider">
+      <p>
+        Ce projet, réalisé dans le cadre du <strong>BUT Science des Données</strong> (IUT Grand Ouest Normandie, 2024-2025), 
+        porte sur l'analyse de séries temporelles de cotations de matières premières observées depuis le 1er janvier 2010.
+      </p>
+      <p>
+        Les matières premières étudiées incluent :
+      </p>
+      <ul>
+        <li>☕ <strong>Café</strong> (Futures café US C - USD)</li>
+        <li>🍫 <strong>Cacao</strong> (Futures cacao US - USD)</li>
+        <li>🍊 <strong>Jus d'orange</strong> (Futures jus d'orange - USD)</li>
+        <li>🍬 <strong>Sucre</strong> (Futures sucre Londres - USD)</li>
+        <li>🛢️ <strong>Pétrole Brent</strong> (Futures pétrole Brent - USD)</li>
+      </ul>
+      <p class="text-muted">
+        <small>Source des données : <a href="https://www.investing.com/news/forex-news/uk-petrol-at-record-high,-europe-may-follow-133939" target="_blank">Investing.com</a></small>
+      </p>
+      
+      <!-- OBJECTIFS -->
+      <h4 class="fw-bold mt-4">Objectifs du projet</h4>
+      <hr class="section-divider">
+      
+      <h5 class="fw-bold mt-3">Mission 1 : Import et préparation des données</h5>
+      <ul>
+        <li>Extraction des données depuis des fichiers PDF avec <code>tabulapdf</code></li>
+        <li>Structuration des données en tibble avec 5 variables par matière première :
+          <ul>
+            <li><strong>Date</strong> : jour de cotation</li>
+            <li><strong>Closed_Cotation</strong> : valeur à la fermeture</li>
+            <li><strong>Opened_Cotation</strong> : valeur à l'ouverture</li>
+            <li><strong>Highest_Cotation</strong> : valeur maximale journalière</li>
+            <li><strong>Lowest_Cotation</strong> : valeur minimale journalière</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h5 class="fw-bold mt-3">Mission 2 : Analyses statistiques</h5>
+      <ul>
+        <li>Création de boxplots annuels pour visualiser les distributions</li>
+        <li>Analyse de l'évolution moyenne mensuelle avec courbes de régression lissées</li>
+        <li>Calcul et visualisation des taux d'évolution mensuels</li>
+        <li>Étude de l'association entre café et cacao (régression linéaire simple)</li>
+        <li>Analyse approfondie du pétrole Brent :
+          <ul>
+            <li>Détection de saisonnalité</li>
+            <li>Modélisation par régression linéaire par morceaux (2020-2024)</li>
+            <li>Identification des ruptures de tendance</li>
+            <li>Prévision sur 26 mois avec intervalle de confiance à 95%</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- MÉTHODOLOGIE -->
+      <h4 class="fw-bold mt-4">Méthodologie</h4>
+      <hr class="section-divider">
+      <ol>
+        <li>Import et nettoyage des données PDF</li>
+        <li>Exploration visuelle avec <code>ggplot2</code> et <code>facet_wrap()</code></li>
+        <li>Calcul des statistiques descriptives et des corrélations</li>
+        <li>Modélisation linéaire avec <code>lm()</code></li>
+        <li>Analyse des résidus et validation des modèles</li>
+        <li>Prévisions avec <code>predict()</code> et intervalles de confiance</li>
+      </ol>
+      
+      <!-- RÉSULTATS CLÉS -->
+      <h4 class="fw-bold mt-4">Résultats clés</h4>
+      <hr class="section-divider">
+      
+      <h5 class="fw-bold mt-3">🛢️ Modélisation du pétrole Brent (2020-2024)</h5>
+      <ul>
+        <li><strong>Coefficient de détermination :</strong> R² = 92,67%</li>
+        <li><strong>Pente du modèle :</strong> β₁ = 0,097 (soit +2,96 $/mois ou +35,56 $/an)</li>
+        <li><strong>Points de rupture identifiés :</strong> plusieurs changements de tendance liés aux événements géopolitiques et économiques</li>
+        <li><strong>Prévision :</strong> estimation sur 26 mois avec bande de confiance à 95%</li>
+      </ul>
+      
+      <div class="alert alert-info mt-3" role="alert">
+        <strong>Interprétation :</strong> Le modèle de régression linéaire par morceaux capture efficacement les variations du prix du Brent, 
+        avec un excellent ajustement (R² > 90%). Les ruptures de tendance correspondent aux grandes phases économiques de la période 2020-2024 
+        (crise COVID-19, reprise économique, guerre en Ukraine).
+      </div>
+
+      <div class="text-center mb-5">
+      <img src="Image_projets/BUT2/serie_chrono.png" 
+     class="img-fluid rounded shadow project-img">
+
+      <p class="text-muted mt-3">
+        <small><strong>Figure :</strong> Modélisation de la cotation du pétrole Brent (2020-2024) avec régression linéaire par morceaux. 
+        Le modèle identifie plusieurs ruptures de tendance et explique 92,67% de la variance (R² = 92,67%). 
+        La courbe verte représente le modèle de régression linéaire par morceaux, tandis que la courbe rouge montre le lissage des données.</small>
+      </p>
+    </div>
+      
+      <!-- TECHNOLOGIES -->
+      <h4 class="fw-bold mt-4">Technologies utilisées</h4>
+      <hr class="section-divider">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><strong>R</strong> (tidyverse, ggplot2)</li>
+            <li><strong>tabulapdf</strong> (extraction PDF)</li>
+            <li><strong>dplyr</strong> (manipulation de données)</li>
+            <li><strong>lubridate</strong> (gestion des dates)</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><strong>RStudio</strong></li>
+            <li><strong>Git & GitHub</strong></li>
+            <li><strong>R Markdown</strong></li>
+            <li><strong>Investing.com</strong> (source de données)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- LIVRABLES -->
+      <h4 class="fw-bold mt-4">Livrables</h4>
+      <hr class="section-divider">
+      <div class="text-center">
+        <a href="https://github.com/Mandir24/Etude_des_cotations" 
+           class="btn btn-outline-dark mx-2" target="_blank">
+          <i class="fa fa-github me-2"></i> Code R
+        </a>
+        <a href="https://github.com/Mandir24/Etude_des_cotations/blob/main/docs/Rapport.pdf" 
+           download="Rapport.pdf"
+           class="btn btn-outline-primary mx-2">
+          <i class="fa fa-download me-2"></i> Rapport
+        </a>
+    
+      </div>
+      
+      <!-- COMPÉTENCES ACQUISES -->
+      <h4 class="fw-bold mt-4">Compétences acquises</h4>
+      <hr class="section-divider">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li>Manipulation de séries temporelles</li>
+            <li>Extraction de données depuis PDF</li>
+            <li>Visualisation avancée avec ggplot2</li>
+            <li>Modélisation par régression</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Détection de ruptures de tendance</li>
+            <li>Analyse de corrélation</li>
+            <li>Prévision avec intervalles de confiance</li>
+            <li>Interprétation de modèles économiques</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Style pour traits sous les titres -->
+<style>
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: #ddd;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+}
+</style>
+
+</body>
+</html>

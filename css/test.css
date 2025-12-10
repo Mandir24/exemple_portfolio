@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* NAVBAR STYLES
+/* ------------------------------------------------------------------------------------------------------------------- */
+experience-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.experience-role {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.experience-company {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+.text-orange {
+    color: #ff6b35;
+}
+
+.experience-context {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    border-left: 3px solid #ff6b35;
+}
+
+.experience-tasks {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.experience-tasks li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.experience-tasks li:before {
+    
+}
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.tech-badge {
+    background: #e8f4f8;
+    color: #0077b6;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .experience-info {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EcoDashboard – Analyse de l’Économie Mondiale</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet">
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <style>
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 992px) {
+            .project-img { max-width: 70%; margin: auto; display: block; }
+        }
+        @media (max-width: 768px) {
+            .project-img { max-width: 100%; }
+        }
+        .section-divider {
+            height: 2px;
+            background: #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body id="page-top" style="padding-top: 90px;">
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html");
+  });
+</script>
+
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="text-center text-uppercase fw-bold">EcoDashboard — Analyse de l'économie mondiale</h2>
+        <hr class="section-divider">
+
+        <p class="text-center mx-auto" style="max-width: 800px;">
+            Dashboard interactif permettant d’analyser et comparer les indicateurs économiques mondiaux grâce à une interface dynamique et des visualisations avancées.
+        </p>
+
+        <div class="text-center mb-4">
+            <span class="badge bg-primary mx-1">PHP</span>
+            <span class="badge bg-success mx-1">SQLite</span>
+            <span class="badge bg-info text-dark mx-1">Chart.js</span>
+            <span class="badge bg-warning text-dark mx-1">GeoJSON</span>
+            <span class="badge bg-secondary mx-1">DataViz</span>
+            <span class="badge bg-dark mx-1">MVC</span>
+        </div>
+
+        <div class="text-center mb-5">
+            <img src="Image_projets/BUT2/economie_mondiale.webp"
+                 class="img-fluid rounded shadow project-img"
+                 style="max-width: 400px;">
+            <p class="text-muted mt-2"></p>
+        </div>
+
+        <div class="mx-auto" style="max-width: 950px;">
+
+            <h4 class="fw-bold">Contexte</h4>
+            <hr class="section-divider">
+            <p>
+                Projet réalisé dans le cadre du BUT Science des Données.  
+                L’objectif : développer un tableau de bord complet pour analyser l'économie mondiale à partir d'indicateurs fiables.  
+                Le projet repose sur une architecture MVC en PHP, une base SQLite et des visualisations interactives via Chart.js et GeoJSON.
+            </p>
+
+            <h4 class="fw-bold mt-4">Objectifs du projet</h4>
+            <hr class="section-divider">
+            <ul>
+                <li>Mettre en place un dashboard interactif et responsive</li>
+                <li>Manipuler une base de données d’indicateurs économiques mondiaux</li>
+                <li>Créer des visualisations dynamiques (lignes, barres, aires, carte)</li>
+                <li>Comparer pays et régions de manière intuitive</li>
+                <li>Optimiser les requêtes SQL pour de meilleures performances</li>
+            </ul>
+
+            <h4 class="fw-bold mt-4">Méthodologie</h4>
+            <hr class="section-divider">
+            <ol>
+                <li>Analyse et schématisation du modèle de données</li>
+                <li>Implémentation des modèles PHP (pays, indicateurs, indices…)</li>
+                <li>Développement des vues du tableau de bord (+ Chart.js)</li>
+                <li>Création des filtres interactifs (régions, pays, années…)</li>
+                <li>Tests, optimisations SQL et documentation finale</li>
+            </ol>
+
+            <h4 class="fw-bold mt-4">Résultats</h4>
+            <hr class="section-divider">
+            <p>
+                EcoDashboard offre une interface complète permettant une analyse claire et structurée de l'économie mondiale :
+            </p>
+            <ul> 
+                <li>**Visualisation de données avancée** : Intégration de graphiques dynamiques (lignes, barres, aires) et d'une **Carte mondiale interactive** (via GeoJSON).</li>
+                <li>**Analyse Filtrable** : Les données sont filtrables par régions, pays et années pour observer l'**Évolution temporelle** d’indicateurs clés comme le PIB.</li>
+                <li>**Comparaison Intuitive** : Le dashboard permet des **Comparaisons multi-pays et multi-régions** sur des indicateurs spécifiques.</li>
+                <li>**Navigation Dédicacée** : Le menu supérieur donne accès à des pages spécifiques, notamment les **Informations détaillées sur un pays** donné et une page de **Comparaison entre deux pays**.</li>
+            </ul>
+
+            <div class="text-center my-4">
+        <img src="Image_projets/BUT2/dashboard_ecp.png" 
+     class="img-fluid rounded shadow project-img"
+     alt="Aperçu du dashboard affichant les graphiques et la carte mondiale."> <p class="text-muted mt-2">Capture d'écran de la page du tableau de bord</p> </div>
+
+            <h4 class="fw-bold mt-4">Structure du projet</h4>
+            <hr class="section-divider">
+<pre style="background:#f8f8f8; padding:15px; border-radius:8px;">
+models/          # Accès aux données (SQLite)
+views/           # Pages du tableau de bord
+controllers/     # Logique MVC
+public/js/       # Graphiques + interactions
+public/css/      # Styles du projet
+sql/             # Base SQLite
+docs/            # Documentation + diagrammes
+</pre>
+
+            <div class="text-center">
+        <a href="https://github.com/Mandir24/EcoDashboard-Global-Analytics"
+           class="btn btn-outline-dark mx-2" target="_blank">
+          <i class="fa fa-github me-2"></i> Code
+        </a>
+
+        <a href="https://github.com/Mandir24/EcoDashboard-Global-Analytics/blob/main/Rapport_SAE.pdf"
+           class="btn btn-outline-danger mx-2" target="_blank">
+          <i class="fa fa-file-pdf-o me-2"></i> Rapport PDF
+        </a>
+      </div>
+
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
