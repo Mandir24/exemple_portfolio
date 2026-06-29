@@ -3,30 +3,27 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Mandir DIOP</title>
+    <title>Mandir DIOP - Portfolio Data Science</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Portfolio de Mandir DIOP - Étudiant en BUT Sciences des Données, passionné par la valorisation des données.">
-    <meta name="keywords" content="Data,Dataviz,Datavisualization,Plot,Chart,,R,Python,D3,Learning,,Pitfall,Mistake,Classification">
+    <meta name="keywords" content="Data,Dataviz,Datavisualization,Plot,Chart,R,Python,D3,Learning,Pitfall,Mistake,Classification">
     <meta name="author" content="Mandir DIOP">
 
-    <!-- Control appearance when share by social media -->
     <meta property="og:title" content="Mandir DIOP" />
-    <meta property="og:description" content="." />
+    <meta property="og:description" content="Portfolio de Mandir DIOP - BUT Sciences des Données." />
     <meta property='og:url' content="portfolio-mandir.com" />
     <meta property="og:type" content="website" />
     <link rel="icon" href="img/logo/mandir_log.ico">
 
-    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Style template -->
     <link href="css/agency.css" rel="stylesheet">
 
 
@@ -34,26 +31,20 @@
 
   <body id="page-top">
 
-
-
-
-
-<!-- Menu de Navigation -->
-
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="box-shadow: 0 2px 4px rgba(0, 100, 0, 0.15);">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" 
+     style="width: 100%; height: 10%; border-bottom: 2px solid rgba(105, 179, 162, 0.3); box-shadow: 0 4px 12px rgba(105, 179, 162, 0.15); background-color: white;">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top" style="display: flex; align-items: center;">
       <img src="img/logo/profile.png" style="width: 50px; height: 50px; object-fit: cover;">
-      <span style="font-size: em; white-space: nowrap; margin-left: 15px; font-weight: bold;">Mandir DIOP</span>
+      <span style="font-size: 1.3em; white-space: nowrap; margin-left: 15px; font-weight: bold;">Mandir DIOP</span>
     </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Menu">
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#">Home</a>
+            <a class="nav-link js-scroll-trigger" href="#page-top">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#description">Profil</a>
@@ -69,7 +60,7 @@
         </li>
         
         <li class="nav-item">
-            <a class="nav-link" href="#poster">Poster</a>
+            <a class="nav-link js-scroll-trigger" href="#poster">Poster</a>
         </li>
       
         <li class="nav-item">
@@ -80,74 +71,84 @@
   </div>
 </nav>
 
-    <!-- Header -->
-    <header class="masthead">
-     <div class="">
-     <div class="container">
+    <header class="masthead" id="particles-js">
+    <div class="container">
         <div class="intro-text">
-          <img src="img/logo/sourire_log.avif" style="width:45%;height:45%;margin-top:80px;">
-            <br><br>
-            <div class="intro-lead-in">
-              Chaque donnée mérite la visualisation parfaite. Explorez mon portfolio et mon parcours pour découvrir comment je donne vie aux chiffres — avec le bon graphique, le bon code, et les bonnes pratiques.
-            <div style="text-align:center">
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" data-toggle="modal" href="#description">Explore</a>
-          </div>
+            <h1 class="intro-heading">Chaque donnée mérite la visualisation parfaite.</h1>
+            <p class="intro-lead-in">
+              Data Viz & Décisionnel <span style="color: #69b3a2;">|</span> Je transforme vos données en décisions.
+            </p>
+            
+            <div class="mt-5">
+                <a href="#description" class="btn-live-app js-scroll-trigger">
+                    <div class="icon-container">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <div class="text-container">
+                        <small>Curriculum & Projets</small>
+                        Découvrir mon Portfolio
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-      <!-- image menu -->
-      <img src="img/logo/profile.png" width="200px" style=" position: absolute; top:10 ; left:5%">
-      </div>
-    </header>
+    </div>
+    
+    <div class="scroll-pulse-container">
+        <a class="js-scroll-trigger" href="#description">
+            <div class="pulse-circle">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </a>
+    </div>
+</header>
+      
 
-
-
-    <section id="description" class="">
+ 
+    <section id="description"> 
+      
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 text-center">
-            <img class="img-fluid" src="img/profile.png" alt="Mandir DIOP profile picture" style="margin-bottom: 30px">
-                <!-- Bouton Mon CV -->
+    <div class="row align-items-center">
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <div class="border-rotate-container">
+                <div class="img-item-rotate">
+                    <img class="img-fluid rounded-circle" src="img/profile.png" alt="Mandir DIOP profile picture">
+                </div>
+            </div>
+        
+            
+            <div class="d-flex justify-content-center gap-3 mt-4">
                 <a href="CV_Mandir/cv_mandir.pdf" download="CV_Mandir_DIOP.pdf" class="btn btn-cv">
                     <i class="fa fa-download"></i> Mon CV
                 </a>
-                <!-- Bouton Contact -->
                 <a href="#contact" class="btn btn-contact">
                     <i class="fa fa-user"></i> Contact
                 </a>
-          </div>
-          
-
-            <div class="col-lg-8 text-md-start">
-            <p>
-              Bonjour, je suis 
-              <span style="color: #69b3a2 !important; font-size: 2em; white-space: nowrap; font-weight: bold;">
-                Mandir DIOP.
-              </span>
-            </p>
-            <p>Étudiant en troisième année de <b style="color:  #69b3a2; font-weight: bold; font-size: 1.2em;">BUT Sciences des Données</b>, parcours 
-              <b>Visualisation et Conception d’Outils Décisionnels</b> à l’<b>IUT Grand Ouest Normandie</b> (site de Lisieux).</p>
-        
-            <p>Passionné par la <b>valorisation des données</b>. J’aime concevoir des <b>applications de visualisation</b> interactives permettant de transformer des données complexes en décisions éclairées.</p>
-        
-            <p>Mon objectif :rendre les données accessibles, compréhensibles et utiles à travers des outils modernes et performants.</p>
-            <p>Je suis actuellement disponible dès  <b>mars pour un stage de 14 semaines </b> dans les domaines : </p>
-        
-            <!-- Animation des domaines -->
-            <div id="animated-buttons">
-              <span class="word-animation" data-text="Data Engineering" data-link="#"></span>
-              <span class="word-animation" data-text="Machine Learning" data-link="#"></span>
-              <span class="word-animation" data-text="Business Analysis" data-link="#"></span>
-              <span class="word-animation" data-text="Data Visualization" data-link="#"></span>
-              <span class="word-animation" data-text="Artificial Intelligence" data-link="#"></span>
             </div>
-          </div>
         </div>
-      </div>
 
-  
-  
-  
-        <div class="row hide-if-small-screen" style="padding-top: 5%">
+        <div class="col-lg-8 text-md-start">
+            <p>
+                Bonjour, je suis 
+                <span class="name-highlight">Mandir DIOP.</span>
+            </p>
+            <p>Étudiant en troisième année de 
+                <b class="but-highlight">BUT Sciences des Données</b>, parcours 
+                <b>Visualisation et Conception d’Outils Décisionnels</b> à l’<b>IUT Grand Ouest Normandie</b> (site de Lisieux).
+            </p>
+            <p>Passionné par la <b>valorisation des données</b>. J’aime concevoir des <b>applications de visualisation</b> interactives permettant de transformer des données complexes en décisions éclairées.</p>
+            <p>Mon objectif : rendre les données accessibles, compréhensibles et utiles à travers des outils modernes et performants.</p>
+
+            <div class="status-badge-container">
+                <p class="status-badge">
+                    <span class="status-dot"></span>
+                    Disponible dès mars pour un stage de 14 semaines minimum
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="row hide-if-small-screen">
           <div class="col-lg-12 text-center">
             <svg width="1000" height="100">
               <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5"></line>
@@ -165,7 +166,7 @@
               <image href="./img/flag/senegal.png" x="556" y="65" height="18" width="16"/>
               
               <circle cx="920" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2"></circle>
-              <text text-anchor="middle" x="920" y="80" fill="black" font-size="10">2023-2025</text>
+              <text text-anchor="middle" x="920" y="80" fill="black" font-size="10">2023-2026</text>
               <text font-size="13" x="630" y="30" fill="black">BUT Science des Données</text>
               <text style="font-style: italic" font-size="13" x="630" y="80" fill="#808080">IUT Grand Ouest Normandie Lisieux</text>
               <image href="./img/flag/france.png" x="860" y="65" height="18" width="16"/>
@@ -173,56 +174,31 @@
           </div>
         </div>
 
-
         <div class="mobile-timeline">
-      <div class="mobile-timeline-item">
-        <h4>Baccalauréat scientifique (Mention Assez-bien)</h4>
-        <div class="date">2020-2021</div>
-        <p>
-          Lycée Sergent Malamine Camara 
-          <span style="font-size: 18px;">🇸🇳</span>
-        </p>
-      </div>
-
-      <div class="mobile-timeline-item">
-        <h4>Licence Génie Informatique</h4>
-        <div class="date">2021-2023</div>
-        <p>
-          Université Iba Der Thiam de Thiés 
-          <span style="font-size: 18px;">🇸🇳</span>
-        </p>
-      </div>
-
-      <div class="mobile-timeline-item">
-        <h4>BUT Science des Données</h4>
-        <div class="date">2023-2025</div>
-        <p>
-          IUT Grand Ouest Normandie Lisieux 
-          <span style="font-size: 18px;">🇫🇷</span>
-        </p>
-      </div>
-
-
-
-
+            <div class="mobile-timeline-item">
+              <h4>Baccalauréat scientifique (Mention Assez-bien)</h4>
+              <div class="date">2020-2021</div>
+              <p>Lycée Sergent Malamine Camara <span style="font-size: 18px;">🇸🇳</span></p>
+            </div>
+            <div class="mobile-timeline-item">
+              <h4>Licence Génie Informatique</h4>
+              <div class="date">2021-2023</div>
+              <p>Université Iba Der Thiam de Thiés <span style="font-size: 18px;">🇸🇳</span></p>
+            </div>
+            <div class="mobile-timeline-item">
+              <h4>BUT Science des Données</h4>
+              <div class="date">2023-2025</div>
+              <p>IUT Grand Ouest Normandie Lisieux <span style="font-size: 18px;">🇫🇷</span></p>
+            </div>
         </div>
       </div>
     </section>
-
-
-
-
-
-
-<!-- ======================== COMPÉTENCES  SECTION ================================ -->
-
 
 <section id="compétences" >
   <div class="container">
     <h2 class="text-uppercase mb-5 fw-bold text-center">Compétences</h2>
 
     <div class="grid">
-      <!-- Analyse de Données -->
       <div class="card">
         <h4>Analyse de Données</h4>
         <p>
@@ -240,7 +216,6 @@
         </div>
       </div>
 
-      <!-- Ingénierie des Données -->
       <div class="card">
         <h4>Ingénierie des Données</h4>
         <p>
@@ -261,7 +236,6 @@
     </div>
 
     <div class="grid">
-      <!-- Statistiques -->
       <div class="card">
         <h4>Statistiques</h4>
         <p>
@@ -272,13 +246,12 @@
         </p>
         <div class="badges">
           <span class="badge">Statistiques descriptives</span>
-          <span class="badge">Inférence</span>
+          <span class="badge">Statistique inférentielle</span>
           <span class="badge">Modélisation</span>
           <span class="badge">Tests d'hypothèses</span>
         </div>
       </div>
 
-      <!-- Machine Learning & NLP -->
       <div class="card">
         <h4>Machine Learning & NLP</h4>
         <p>
@@ -299,13 +272,11 @@
   </div>
   </section>
 
-<!-- Section Outils et Technologies -->
 <section id="outils" class="py-5">
   <div class="container text-center">
     <h2 class="text-uppercase mb-5 fw-bold">Outils et Technologies</h2>
 
     <div class="logos-container">
-      <!-- Première bande -->
       <div class="logos-slide">
         <div class="logo-item" data-info="Langage pour l’analyse, la modélisation et l’automatisation des données.">
           <img src="img/outils/Python.svg.png" alt="Python">
@@ -394,6 +365,10 @@
         <div class="logo-item" data-info="Langage pour automatiser des tâches dans Excel.">
           <img src="img/outils/VBA.png" alt="VBA">
           <p>VBA</p>
+        </div>
+        <div class="logo-item" data-info="Moteur de préparation de données de Microsoft permettant d'importer, nettoyer et transformer des données via une interface intuitive sans code.">
+          <img src="img/outils/Microsoft-Power-Query.png-removebg-preview.png" alt="Power Query">
+          <p>Power Query</p>
         </div>
         <div class="logo-item" data-info="Logiciel d’analyse statistique et de data mining.">
           <img src="img/outils/SAS.png" alt="SAS">
@@ -415,6 +390,22 @@
           <img src="img/outils/talend_logo.png" alt="Talend">
           <p>Talend</p>
         </div>
+        <div class="logo-item" data-info="Plateforme basée sur le cloud permettant d'écrire et d'exécuter du code Python, idéale pour le Machine Learning.">
+          <img src="img/outils/google_colab_logo.png" alt="Google Colab">
+          <p>Google Colab</p>
+        </div>
+        <div class="logo-item" data-info="Fournisseur de services cloud offrant une infrastructure complète (stockage S3, calcul EC2, bases de données).">
+          <img src="img/outils/aws_logo.png" alt="AWS">
+          <p>AWS</p>
+        </div>
+        <div class="logo-item" data-info="Fournisseur de services cloud offrant une infrastructure complète (stockage S3, calcul EC2, bases de données).">
+          <img src="img/outils/pyspark.png" alt="PySpark">
+          <p>PySpark</p>
+        </div>
+        <div class="logo-item" data-info="Plateforme de conteneurisation permettant de packager, distribuer et exécuter des applications dans des environnements isolés.">
+          <img src="img/outils/docker_logo.png" alt="Docker">
+          <p>Docker</p>
+        </div>
       </div>
 
       <div class="logos-slide">
@@ -506,6 +497,10 @@
           <img src="img/outils/VBA.png" alt="VBA">
           <p>VBA</p>
         </div>
+        <div class="logo-item" data-info="Moteur de préparation de données de Microsoft permettant d'importer, nettoyer et transformer des données via une interface intuitive sans code.">
+          <img src="img/outils/Microsoft-Power-Query.png-removebg-preview.png" alt="Power Query">
+          <p>Power Query</p>
+        </div>
         <div class="logo-item" data-info="Logiciel d’analyse statistique et de data mining.">
           <img src="img/outils/SAS.png" alt="SAS">
           <p>SAS</p>
@@ -519,33 +514,40 @@
           <p>UML</p>
         </div>
         <div class="logo-item" data-info="Bibliothèque Python essentielle pour la préparation et la manipulation de données, notamment grâce aux tableaux multidimensionnels.">
-          <img src="img/outils/numpy_logo.png" alt="NumPy">
+          <img src="img/outils/numpy_logo.png" alt="Logo NumPy">
           <p>NumPy</p>
         </div>
         <div class="logo-item" data-info="Outil d’intégration et de transformation de données permettant l'automatisation de flux ETL.">
           <img src="img/outils/talend_logo.png" alt="Talend">
           <p>Talend</p>
         </div>
+        <div class="logo-item" data-info="Plateforme basée sur le cloud permettant d'écrire et d'exécuter du code Python, idéale pour le Machine Learning.">
+          <img src="img/outils/google_colab_logo.png" alt="Google Colab">
+          <p>Google Colab</p>
+        </div>
+        <div class="logo-item" data-info="Fournisseur de services cloud offrant une infrastructure complète (stockage S3, calcul EC2, bases de données).">
+          <img src="img/outils/aws_logo.png" alt="AWS">
+          <p>AWS</p>
+        </div>
+        <div class="logo-item" data-info="Fournisseur de services cloud offrant une infrastructure complète (stockage S3, calcul EC2, bases de données).">
+          <img src="img/outils/pyspark.png" alt="PySpark">
+          <p>PySpark</p>
+        </div>
+        <div class="logo-item" data-info="Plateforme de conteneurisation permettant de packager, distribuer et exécuter des applications dans des environnements isolés.">
+          <img src="img/outils/docker_logo.png" alt="Docker">
+          <p>Docker</p>
+        </div>
       </div>
     </div>
 
-    <!-- Zone où le texte s’affichera -->
-  <div id="outil-description" class="outil-description">
+    <div id="outil-description" class="outil-description">
     Survolez un logo pour voir sa description.
   </div>
 
   </div>
 </section>
 
-
-
-
-
-
-
-<!-- ======================== EXPÉRIENCES  SECTION ================================ -->
-
-<section id="expériences" class="experience-section">
+<section id="expériences" class="py-5">
   <div class="experience-container">
       <h2 class="text-uppercase mb-5 fw-bold text-center">Expériences Professionnelles</h2>
 
@@ -614,7 +616,7 @@
         <span class="tech-badge">Web Scraping</span>
         <span class="tech-badge">API REST</span>
         
-        <a href="https://github.com/Mandir24" target="_blank" class="containeer github">
+        <a href="https://github.com/Mandir24/Mandir24/blob/main/Stage_BUT2.md" target="_blank" class="containeer github">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
             </svg>
@@ -669,436 +671,291 @@
                <li>Traitement des bons de commande et contrôle de la conformité des produits avant expédition vers les clients.</li>
            </ul>
       </div>
-
-
   </div>
+</section>
+
+<section id="projets">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Projets</h2>
+        <h3 class="section-subheading text-muted">
+          Explorez mon univers Data : des projets variés qui démontrent ma capacité à extraire de la valeur des données complexes.
+        </h3>
+
+        <div class="project-info-bar">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="16" width="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </div>
+            <span>Détails du projet</span>
+          </div>
+          <div class="info-divider"></div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </div>
+            <span>Dépôt GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <div class="row px-md-5 px-4">
+            
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                <img src="projet/Image_projets/BUT3/world_univ.webp" class="project-img" alt="World Univ">
+                <div class="project-actions">
+                  <a href="#" data-toggle="modal" data-target="#projectModal" class="action-btn" title="Détails">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <a href="https://github.com/Mandir24/Analyse_conception_outils_dc" target="_blank" class="action-btn" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  </a>
+                </div>
+                <h4 class="project-title-link"><a href="#" data-toggle="modal" data-target="#projectModal">World-Univ-Rank</a></h4>
+                <p class="project-text">Application Flask d'analyse décisionnelle sur les classements mondiaux.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                <img src="projet/Image_projets/BUT2/matieres_premieres.png" class="project-img" alt="Matières premières">
+                <div class="project-actions">
+                  <a href="projet/cotation.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                  <a href="https://github.com/Mandir24/Etude_des_cotations" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                </div>
+                <h4 class="project-title-link"><a href="projet/cotation.html" target="_blank">Cotations Matières</a></h4>
+                <p class="project-text">Modélisation du pétrole Brent avec régression linéaire par morceaux.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                <img src="projet/Image_projets/BUT2/economie_mondiale.webp" class="project-img" alt="EcoDashboard">
+                <div class="project-actions">
+                  <a href="projet/economique_dashboard.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                  <a href="https://github.com/Mandir24/EcoDashboard-Global-Analytics" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                </div>
+                <h4 class="project-title-link"><a href="projet/economique_dashboard.html" target="_blank">EcoDashboard</a></h4>
+                <p class="project-text">Tableau de bord interactif pour les indicateurs économiques mondiaux.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                <img src="projet/Image_projets/BUT2/image_bourse_track.webp" class="project-img" alt="BourseTrack">
+                <div class="project-actions">
+                  <a href="projet/bourse_track.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                  <a href="https://github.com/Mandir24/BourseTrack" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                </div>
+                <h4 class="project-title-link"><a href="projet/bourse_track.html" target="_blank">BourseTrack</a></h4>
+                <p class="project-text">Analyse automatisée des performances boursières via APIs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row px-md-5 px-4">
+            
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="project-card">
+                  <img src="projet/Image_projets/BUT3/datamining.png" class="project-img" alt="kNN">
+                  <div class="project-actions">
+                    <a href="projet/datamining.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                    <a href="https://github.com/Mandir24/knn-model-selection-datamining" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                  </div>
+                  <h4 class="project-title-link"><a href="projet/datamining.html" target="_blank">Modélisation k-N-Neighbors</a></h4>
+                  <p class="project-text">Détermination de k optimal pour les plus proches voisins.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="project-card">
+                  <img src="projet/Image_projets/BUT1/dece_france1.png" class="project-img" alt="Décès France">
+                  <div class="project-actions">
+                    <a href="projet/dece_france.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                    <a href="https://github.com/Mandir24/Analyse-Deces-R" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                  </div>
+                  <h4 class="project-title-link"><a href="projet/dece_france.html" target="_blank">Mortalité France</a></h4>
+                  <p class="project-text">Analyse statistique de 2,6M de décès avec le langage R.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="project-card">
+                  <img src="projet/Image_projets/BUT1/manchots2.jpg" class="project-img" alt="Manchots">
+                  <div class="project-actions">
+                    <a href="projet/manchots.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                    <a href="https://github.com/Mandir24/SAE_manchots" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                  </div>
+                  <h4 class="project-title-link"><a href="projet/manchots.html" target="_blank">Régression Manchots</a></h4>
+                  <p class="project-text">Étude morphologique et modélisation de la masse corporelle.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="project-card">
+                  <img src="projet/Image_projets/BUT2/agrican_final.png" class="project-img" alt="Agrican">
+                  <div class="project-actions">
+                    <a href="projet/agriculture_cancer.html" target="_blank" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                    <a href="https://github.com/Mandir24/AGRICAN" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+                  </div>
+                  <h4 class="project-title-link"><a href="projet/agriculture_cancer.html" target="_blank">Clustering Agrican</a></h4>
+                  <p class="project-text">Analyse multivariée (ACP & K-means) des pratiques agricoles.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row px-md-5 px-4">
+            <div class="col-lg-3 col-md-6 text-center mb-5">
+                <div class="project-card">
+                    <img src="projet/Image_projets/BUT3/scoring_banner.jpg" class="project-img" alt="Inclusion Financière & IA">
+                    
+                    <div class="project-actions">
+                        <a href="projet/credit_scoring.html" target="_blank" class="action-btn" title="Voir l'App Live">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Mandir24/scoring-credit-datamining" target="_blank" class="action-btn" title="Code Source">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <h4 class="project-title-link">
+                        <a href="projet/credit_scoring.html" target="_blank">Analyse de Solvabilité Prédictive</a>
+                    </h4>
+                    
+                    <p class="project-text">Modélisation du risque pour les profils sans historique bancaire via XGBoost et SMOTE.</p>
+                </div>
+            </div>
 
 
+
+          <div class="col-lg-3 col-md-6 text-center mb-5">
+            <div class="project-card">
+              <img src="projet/Image_projets/BUT2/elections_2024.png" class="project-img" alt="Élections Européennes 2024">
+              <div class="project-actions">
+                <a href="projet/story_elections.html" class="action-btn" title="Voir la StoryMap">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com/Mandir24/election-europeen" target="_blank" class="action-btn" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                  </svg>
+                </a>
+              </div>
+              <h4 class="project-title-link">
+                <a href="projet/story_elections.html">Élections Européennes 2024</a>
+              </h4>
+              <p class="project-text">Analyse statistique et cartographique des clivages territoriaux sous R.</p>
+            </div>
+          </div>
+
+
+
+          
+          <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                  <img src="projet/Image_projets/projet_venir.jpg" class="project-img" alt="A venir">
+                  
+                  <div class="project-actions">
+                      <a href="#" target="_blank" class="action-btn">
+                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                              <polyline points="15 3 21 3 21 9"></polyline>
+                              <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                      </a>
+                      <a href="https://github.com/Mandir24/" target="_blank" class="action-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                          </svg>
+                      </a>
+                  </div>
+
+                  <h4 class="project-title-link">
+                      <a href="#" target="_blank">A venir</a>
+                  </h4>
+                  
+                  <p class="project-text">Ce site est est encore en développement.</p>
+              </div>
+          </div>
+
+
+
+
+          
+          <div class="col-lg-3 col-md-6 text-center mb-5">
+              <div class="project-card">
+                  <img src="projet/Image_projets/projet_venir.jpg" class="project-img" alt="A venir">
+                  
+                  <div class="project-actions">
+                      <a href="#" target="_blank" class="action-btn">
+                          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                              <polyline points="15 3 21 3 21 9"></polyline>
+                              <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                      </a>
+                      <a href="https://github.com/Mandir24/" target="_blank" class="action-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                          </svg>
+                      </a>
+                  </div>
+
+                  <h4 class="project-title-link">
+                      <a href="#" target="_blank">A venir</a>
+                  </h4>
+                  
+                  <p class="project-text">Ce site est est encore en développement.</p>
+              </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+     
+
+      <a class="prev1"  href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="next1" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+
+    <div class="text-center mt-4">
+      <a class="btn-explore" href="projets.html">Tous mes projets</a>
+    </div>
+  </div>
 </section>
 
 
 
-
-
-
-<!-- ======================== Projets SECTION ================================ -->
-<section id="projets" class="">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase"> Projets </h2>
-        <h3 class="section-subheading text-muted">Explorez mon univers Data : des projets variés qui démontrent ma capacité à extraire de la valeur des données complexes.</h3>
-      </div>
-    </div>
-
-
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-
-          <div class="carousel-item active">
-            <div class="row">
-
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-               <img src="projet/Image_projets/BUT3/datamining.png" 
-                          alt="Machine Learning kNN"
-                          width="200" height="120">
-
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24/knn-model-selection-datamining" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Paramétrage d'une méthode des plus proches voisins (kNN)</p>
-                  <p class="mytextrelated">
-                    Détermination de k optimal.                </div>
-              </div>
-
-
-
-              <!-- Commentaire important conernant le site web-->
-              <!-- faut mettre 4 projet et puis 4 autre projets popur que ca puisse tourner quanqdmeme les projets du coup -->
-             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="projet/Image_projets/BUT2/matieres_premieres.png" 
-                      alt="Analyse séries temporelles - Matières premières"
-                      width="200" height="120">
-                  
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/cotation.html" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-                    
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24/Etude_des_cotations" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-                  
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Étude des cotations de matières premières</p>
-                  <p class="mytextrelated">Modélisation du pétrole Brent avec régression linéaire par morceaux.</p>
-                </div>
-              </div>
-
-
-
-             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-
-                    <!-- 🖼️ Image principale -->
-                    <img src="projet/Image_projets/BUT2/economie_mondiale.webp"
-                        alt="EcoDashboard – Analyse de l'économie mondiale"
-                        width="200" height="120"">
-
-                    <!-- 🧭 Icônes : Page projet + GitHub -->
-                    <div class="social-icons" style="margin-top: 12px; display: flex; justify-content: center; gap: 15px;">
-
-                        <!-- 🔗 Lien vers la page du projet -->
-                        <a href="projet/economique_dashboard.html"
-      
-                          class="icon-container edit"
-                          title="Voir le projet">
-                            <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512"
-                                height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                            </svg>
-                        </a>
-
-                        <!-- 🐙 GitHub -->
-                        <a href="https://github.com/Mandir24/EcoDashboard-Global-Analytics"
-                    
-                          class="icon-container github"
-                          title="Voir le code sur GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="20" fill="black" viewBox="0 0 24 24">
-                                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                            </svg>
-                        </a>
-
-                    </div>
-
-                    <!-- 📄 Titre du projet -->
-                    <p class="mytitlerelated mt-2">EcoDashboard</p>
-
-                    <!-- 📝 Description -->
-                    <p class="mytextrelated">
-                      Tableau de bord interactif pour analyser et comparer les indicateurs économiques mondiaux.                      </p>
-                </div>
-            </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-    <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-
-        <img src="projet/Image_projets/BUT2/image_bourse_track.webp"
-            alt="BourseTrack – Analyse Financière et Tendance des Actions"
-            width="200" height="120">
-
-        <div class="social-icons" style="margin-top: 12px; display: flex; justify-content: center; gap: 15px;">
-
-            <a href="projet/bourse_track.html"
-              class="icon-container edit"
-              title="Voir le projet">
-                <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512"
-                    height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                </svg>
-            </a>
-
-            <a href="https://github.com/Mandir24/BourseTrack"
-              class="icon-container github"
-              title="Voir le code sur GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    width="20" height="20" fill="black" viewBox="0 0 24 24">
-                    <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                </svg>
-            </a>
-
-        </div>
-
-        <p class="mytitlerelated mt-2">BourseTrack</p>
-
-        <p class="mytextrelated">
-          Analyse automatisée des performances boursières (100 jours) via APIs et SQLite.
-        </p>
-    </div>
-</div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                <div class="btn btn-project mybtnrelated" style="margin-bottom: 4px; white-space: normal !important;">
-                  <!-- 🖼️ Image principale -->
-                  <img src="img/mistake/order_data.png" alt="Order your data">
-              
-                  <!-- 🧭 Icônes : ton logo + GitHub -->
-                  <div class="social-icons" style="margin-top: 12px;">
-                    <!-- ✏️ Ton logo -->
-                    <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-                      <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-                      </svg>
-                    </a>
-              
-                    <!-- 🐙 Logo GitHub -->
-                    <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                      </svg>
-                    </a>
-                  </div>
-              
-                  <!-- 📄 Texte descriptif -->
-                  <p class="mytitlerelated mt-2">Order your data</p>
-                  <p class="mytextrelated">When displaying the value of several entities, ordering it makes it way more insightful.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-    </div>
-    <br>
-    <div style="text-align:center"><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="projets.html">Tous mes projets</a></div>
-
-  </section>
-
-
-<!-- ============================= POSTER SECTION ========================== -->
-
-
 <section id="poster">
   <div class="container">
+
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Poster</h2>
@@ -1107,86 +964,85 @@
         </h3>
       </div>
     </div>
+
     <div class="slideshow-container">
+      
       <div class="mySlides">
-        <div style="text-align:center; margin-bottom:10px;">
-          <b style="color: #69b3a2; font-weight: bold; font-size: 1.2em;">BUT Sciences des Données 2</b>
+        <div class="text-center mb-3">
+          <b class="but-highlight">BUT Sciences des Données 2</b>
         </div>
-        <img src="img/poster_m/serie_chrono.pdf" style="width:60%; max-width:600px; margin:0 auto; display:block;">
-        <div style="text-align:center; margin-top:15px;">
-          <a href="projet/cotation.html" target="_blank" class="icon-container edit">
-            <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-              <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-            </svg>
-          </a>
-          <a href="https://github.com/Mandir24/Etude_des_cotations" target="_blank" class="icon-container github">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="mySlides">
-        <div style="text-align:center; margin-bottom:10px;">
-          <b style="color: #69b3a2; font-weight: bold; font-size: 1.2em;">BUT Sciences des Données 2</b>
-        </div>
-        <img src="img/poster_m/Bourse_Track.pdf" style="width:60%; max-width:600px; margin:0 auto; display:block;">
-        <div style="text-align:center; margin-top:15px;">
-          <a href="img/poster_m/Bourse_Track.pdf" target="_blank" class="icon-container edit">
-            <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-              <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-            </svg>
-          </a>
-          <a href="https://github.com/Mandir24" target="_blank" class="icon-container github">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="mySlides">
-        <div style="text-align:center; margin-bottom:10px;">
-          <b style="color: #69b3a2; font-weight: bold; font-size: 1.2em;">BUT Sciences des Données 3</b>
-        </div>
-        <a href="img/poster_m/poster_datamining.pdf" target="_blank">
-          <img src="img/poster_m/poster_datamining.pdf" style="width:70%; max-width:800px; margin:0 auto; display:block;">
+        <a href="img/poster_m/serie_chrono.png" target="_blank">
+          <img src="img/poster_m/serie_chrono.png" class="img-fluid rounded shadow-sm" style="width:60%; max-width:600px; margin:0 auto; display:block;">
         </a>
-        <div style="text-align:center; margin-top:15px;">
-          <a href="projet/datamining.html" target="_blank" class="icon-container edit">
-            <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 512 512" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-              <path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path>
-            </svg>
+        <div class="project-actions mt-3">
+          <a href="projet/cotation.html" class="action-btn" title="Voir le projet">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
-          <a href="https://github.com/Mandir24/knn-model-selection-datamining" target="_blank" class="icon-container github">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
-              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-            </svg>
+          <a href="https://github.com/Mandir24/Etude_des_cotations" target="_blank" class="action-btn" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
           </a>
         </div>
       </div>
-      <!-- Boutons de navigation -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="mySlides">
+        <div class="text-center mb-3">
+          <b class="but-highlight">BUT Sciences des Données 2</b>
+        </div>
+        <a href="img/poster_m/boursetrack.png" target="_blank">
+           <img src="img/poster_m/boursetrack.png" class="img-fluid rounded shadow-sm" style="width:60%; max-width:600px; margin:0 auto; display:block;">
+        </a>
+        <div class="project-actions mt-3">
+          <a href="projet/bourse_track.html" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+          <a href="https://github.com/Mandir24/BourseTrack" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="text-center mb-3">
+          <b class="but-highlight">BUT Sciences des Données 3</b>
+        </div>
+        <a href="img/poster_m/datamining.png" target="_blank">
+          <img src="img/poster_m/datamining.png" class="img-fluid rounded shadow-sm" style="width:70%; max-width:800px; margin:0 auto; display:block;">
+        </a>
+        <div class="project-actions mt-3">
+          <a href="projet/datamining.html" class="action-btn"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+          <a href="https://github.com/Mandir24/knn-model-selection-datamining" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="text-center mb-3">
+          <b class="but-highlight">BUT Sciences des Données 3</b>
+        </div>
+        <a href="img/poster_m/worl_univ.png" target="_blank">
+          <img src="img/poster_m/worl_univ.png" class="img-fluid rounded shadow-sm" style="width:70%; max-width:800px; margin:0 auto; display:block;">
+        </a>
+        <div class="project-actions mt-3">
+          <a href="#" data-toggle="modal" data-target="#projectModal" class="action-btn" title="Détails"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="18" width="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+          <a href="https://github.com/Mandir24/Analyse_conception_outils_dc" target="_blank" class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.02c-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.68.42.36.79 1.1.79 2.22v3.29c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+        </div>
+      </div>
+
+      
+      <a class="prev" onclick="plusSlides(-1)" role="button">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="next" onclick="plusSlides(1)" role="button">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
     </div>
-    <br>
-    <!-- Points indicateurs -->
-    <div style="text-align:center">
+
+    <div class="text-center mt-4">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
+
   </div>
 </section>
-
-
-
-
-<!-- ======================================================================= -->
-
-
-
-<!-- ======================= CONTACT SECTION =============================== -->
-
 
 <section id="contact" style="box-shadow: 0 2px 4px rgba(0, 100, 0, 0.15); padding: 60px 0;">
   <div class="container">
@@ -1200,26 +1056,25 @@
           <a href="mailto:diopmandir53@gmail.com">diopmandir53@gmail.com</a>.
         </p>
 
-        <!-- ✅ Formulaire -->
         <form id="contactForm" class="text-start mt-4">
           <div class="row">
             <div class="col-md-6">
-              <label for="prenom">Prénom *</label>
+              <label for="prenom">Prénom <span style="color: red;">*</span></label>
               <input type="text" class="form-control" id="prenom" name="prenom" required>
             </div>
             <div class="col-md-6">
-              <label for="nom">Nom *</label>
+              <label for="nom">Nom <span style="color: red;">*</span></label>
               <input type="text" class="form-control" id="nom" name="nom" required>
             </div>
           </div>
 
           <div class="mt-3">
-            <label for="email">Email *</label>
+            <label for="email">Email <span style="color: red;">*</span></label>
             <input type="email" class="form-control" id="email" name="email" required>
           </div>
 
           <div class="mt-3">
-            <label for="message">Message *</label>
+            <label for="message">Message <span style="color: red;">*</span></label>
             <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
           </div>
 
@@ -1231,7 +1086,6 @@
           </div>
         </form>
 
-        <!-- ✅ Messages cachés par défaut -->
         <div class="alert alert-success mt-4 d-none" id="successAlert" role="alert">
           <strong>Merci !</strong> Votre message a bien été envoyé 🎉
         </div>
@@ -1244,14 +1098,11 @@
 </section>
 
 
-
-
-<!-- ======================= FOOTER SECTION ================================ -->
 <footer class="bg-light py-4 border-top">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4 text-center text-md-start">
-        <span class="copyright">Copyright &copy; 2025 Mandir DIOP</span>
+        <span class="copyright">Copyright &copy; 2026 Mandir DIOP</span>
       </div>
       <div class="col-md-4">
         <ul class="list-inline social-buttons text-center my-3 my-md-0">
@@ -1282,81 +1133,38 @@
     </div>
     <div class="row">
         <div class="col-12 text-center text-muted small mt-2">
-            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="list-inline quicklinks"> + 33 7 80 85 66 34</i>
         </div>
     </div>
   </div>
 </footer>
-<!-- ======================================================================= -->
 
 
-<!-- ======================== JAVASCRIPT SECTION =========================== -->
-
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
-    <!-- Tom's script for button colors -->
     <script src="js/portfolio.js"></script>
     <script src="js/tree.js"></script>
 
-    <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <!-- By default, show the numeric tree -->
     <script>
-      showTree('num');
+      // Assurez-vous d'avoir la fonction showTree dans js/tree.js
+      // showTree('num'); 
     </script>
 
-    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
     <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     })
     </script>
-
-
- <script>
-  function closeBanner() {
-    event.stopPropagation(); // Stop the event from propagating to parent elements
-    event.preventDefault(); // Prevent the default action (link navigation)
-    document.getElementById('promo-banner').style.display = 'none';
-  }
- </script>
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-79254642-3');
-  </script>
-  <script>
-  var getOutboundLink = function(url) {
-    gtag('event', 'click', {
-      'event_category': 'outbound',
-      'event_label': url,
-      'transport_type': 'beacon',
-      'event_callback': function(){document.location = url;}
-    });
-  }
-  </script>
-
 
     <script>
     var slideIndex = 1;
@@ -1382,22 +1190,119 @@
       for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+      if (slides.length > 0) { // Vérification ajoutée
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].classList.add("active");
+      }
     }
     </script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/animation_logo_.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 150, // Ajustez le nombre pour plus ou moins de densité
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#69b3a2" },
+        "shape": { "type": "edge" }, // Garde l'aspect "petits carrés"
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#69b3a2",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2, // Vitesse de croisière des particules
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "window", // Détecte la souris sur toute la fenêtre
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab" // Les lignes se connectent à votre souris
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push" // Ajoute des particules au clic
+          }
+        },
+        "modes": {
+          "grab": {
+            "distance": 200, // Distance à laquelle la souris attire les lignes
+            "line_linked": { "opacity": 0.8 }
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    </script>
 
-
-
-  <!-- Script concernant l'animation du site web -->
-
-  <script src="./js/animation.js"></script>
-
-
-  <!-- Script concernant l'animation des logos -->
-  <script src="./js/animation_logo_.js"></script>
-
-<!-- ======================================================================= -->
+    <script src="./js/menu.js"></script>
+          
   </body>
 
+
+
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content custom-modal-premium-light">
+      
+      <div class="modal-header">
+        <div class="header-content">
+            <span class="project-category">SAÉ 5.VCOD.01</span>
+            <h4 class="modal-title">Analyse et conception d'un outil décisionnel</h4>
+        </div>
+        <button type="button" class="close-btn" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-7 pr-md-4">
+            <h6 class="section-title"><i class="fa fa-info-circle"></i> À propos du projet</h6>
+            <p class="project-desc">
+              <strong>World UniRank</strong> est une plateforme interactive d'aide à la décision. Elle traite plus de 10 ans de données du <em>Times Higher Education</em> pour corréler la performance académique avec les indicateurs socio-économiques mondiaux.
+            </p>
+            <div class="goals">
+                <span><i class="fa fa-check"></i> Visualisation multidimensionnelle</span>
+                <span><i class="fa fa-check"></i> Analyse de corrélation (PIB, Parité)</span>
+            </div>
+          </div>
+
+          <div class="col-md-5 side-info">
+            <div class="action-buttons">
+                <a href="https://github.com/Mandir24/Analyse_conception_outils_dc" target="_blank" class="btn-primary-custom">
+                    <i class="fa fa-github"></i> Voir le Repo
+                </a>
+                <a href="https://analyse-conception-outils-dc.onrender.com" target="_blank"  class="btn-secondary-custom">
+                    <i class="fa fa-globe"></i> Visiter le site
+                </a>
+            </div>
+            
+            <div class="stack-section">
+              <p class="label">Outils techniques</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">SQLAlchemy</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 </html>

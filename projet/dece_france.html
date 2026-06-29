@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Analyse des Décès en France (2019-2022) | Portfolio</title>
+    
+    <meta name="description" content="Analyse statistique descriptive des décès en France entre 2019 et 2022 : étude démographique et régionale réalisée avec le langage R.">
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet"> 
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-color: #fdfdfd;
+        }
+
+        .project-content {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img:hover {
+            transform: scale(1.01);
+        }
+
+        .section-divider {
+            height: 3px;
+            background: #2980b9;
+            border-radius: 5px;
+            margin: 15px auto 40px auto;
+            max-width: 120px;
+            opacity: 0.8;
+        }
+
+        .badge-custom {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 5px;
+            color: #fff !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-r { background-color: #276cb0 !important; }
+        .badge-latex { background-color: #333333 !important; }
+        .badge-stats { background-color: #95a5a6 !important; }
+        
+        .stat-card {
+            padding: 25px;
+            border-radius: 10px;
+            background: #ffffff;
+            border-bottom: 4px solid #2980b9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            transition: translateY 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target="#mainNav" style="padding-top: 90px;">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html"); 
+  });
+</script>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+
+            <header class="text-center mb-5">
+                <h1 class="text-uppercase fw-bolder mb-3">Les décès en France entre 2019 et 2022</h1>
+                <hr class="section-divider">
+                <p class="mx-auto lead text-muted" style="max-width: 800px;">
+                    Analyse statistique descriptive visant à caractériser la mortalité nationale et régionale à partir des registres officiels.
+                </p>
+            </header>
+
+            <div class="text-center mb-5">
+                <span class="badge-custom badge-r">Langage R</span>
+                <span class="badge-custom badge-latex">LaTeX</span>
+                <span class="badge-custom badge-stats">Statistiques Descriptives</span>
+                <span class="badge-custom badge-stats">Base R</span>
+            </div>
+
+            <div class="row mb-5 text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card">
+                        <h3 class="fw-bold text-dark">2 621 178</h3>
+                        <p class="text-muted mb-0">Observations analysées</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card">
+                        <h3 class="fw-bold text-dark">79,59 ans</h3>
+                        <p class="text-muted mb-0">Âge moyen au décès</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card">
+                        <h3 class="fw-bold text-dark">83,72 ans</h3>
+                        <p class="text-muted mb-0">Âge médian observé</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-primary"> Présentation du projet</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #2980b9; border-width: 3px;">
+                    <p>
+                        Ce projet explore les données massives de mortalité sur la période 2019-2022. L'étude permet de dégager des tendances structurelles en isolant des variables telles que la région, l'âge et le sexe. Une attention particulière est portée à la région Normandie et ses départements.
+                    </p>
+                    <h5 class="fw-bold fs-5 mt-4">Objectifs principaux :</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-caret-right text-primary me-2"></i> <b>Étude Démographique</b> : Analyse de la répartition par sexe et pyramide des âges.</li>
+                        <li><i class="fa fa-caret-right text-primary me-2"></i> <b>Analyse Territoriale</b> : Comparaison du volume de décès par région et département.</li>
+                        <li><i class="fa fa-caret-right text-primary me-2"></i> <b>Corrélations</b> : Mesure de l'influence des variables via le V de Cramer (0,56% pour le sexe).</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-primary"> Méthodologie</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #2980b9; border-width: 3px;">
+                    <p>L'étude a été menée selon un protocole rigoureux :</p>
+                    <ul>
+                        <li><b>Traitement de données (R)</b> : Nettoyage et filtrage de fichiers massifs à largeur fixe.</li>
+                        <li><b>Analyses Statistiques</b> : Calcul d'indicateurs de position (moyenne, médiane) et de dispersion.</li>
+                        <li><b>Visualisation</b> : Conception de barplots, histogrammes et boxplots pour identifier les asymétries.</li>
+                        <li><b>Édition</b> : Production d'un rapport académique structuré avec LaTeX.</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-primary"> Résultats marquants</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #2980b9; border-width: 3px;">
+                    <div class="text-center mb-4">
+                        <img src="Image_projets/BUT1/deces_france2.png" 
+                             class="img-fluid rounded shadow project-img" 
+                             style="max-width: 800px;" 
+                             alt="Graphique des décès par région en 2022">
+                    </div>
+                    <p>
+                        L'analyse géographique révèle des disparités importantes liées à la densité démographique. En 2022, la région <b>Île-de-France (IDF)</b> enregistre le volume de décès le plus élevé (près de 80 000), suivie par l'Auvergne-Rhône-Alpes et la Nouvelle-Aquitaine. 
+                    </p>
+                    <p>
+                        À l'opposé, la <b>Corse (COR)</b> présente les effectifs les plus faibles, ce qui s'explique par son poids démographique moindre. Ces observations confirment que la répartition spatiale des décès reste fortement corrélée à la taille de la population résidente de chaque région.
+                    </p>
+                </article>
+
+                <div class="text-center">
+                    <a href="https://github.com/Mandir24/deces_france"
+                    class="btn btn-outline-dark mx-2" target="_blank">
+                    <i class="fa fa-github me-2"></i> Code
+                    </a>
+
+                    <a href="https://github.com/Mandir24/deces_france/blob/main/Rapport-SAE.pdf"
+                    class="btn btn-outline-danger mx-2" target="_blank">
+                    <i class="fa fa-file-pdf-o me-2"></i> Rapport
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2026 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

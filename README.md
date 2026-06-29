@@ -6,7 +6,7 @@
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mandir-diop-92bab6276/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mandir24)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-69B3A2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://portfolio-mandir.com)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-69B3A2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://portfolio-mandir.vercel.app/)
 </div>
 
 ## 🌐 Aperçu du Projet
@@ -55,9 +55,6 @@ Je suis à l'écoute de toutes opportunités de stage ou d'alternance et de tout
 * **LinkedIn :** [Mon Profil](https://www.linkedin.com/in/mandir-diop-92bab6276/)
 * **GitHub :** [Mon Dépôt](https://github.com/Mandir24)
 
-## 🤝 Remerciements
-
-Ce portfolio est basé sur une adaptation du thème Agency de Start Bootstrap et de diverses inspirations open source, dont le travail initial de Yan Holtz (Data to Viz) pour certaines structures et idées de visualisation.
 
 ---
 *Mis à jour : Décembre 2025*

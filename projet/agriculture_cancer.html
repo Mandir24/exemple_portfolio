@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Analyse Agrican 1960 | Portfolio Mandir Diop</title>
+    
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet"> 
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+
+    <style>
+        body { background-color: #fdfdfd; }
+        .project-content { max-width: 950px; margin: 0 auto; }
+        
+        .content-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            border-left: 5px solid #64bc9c; /* Bleu acier du graphique */
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: #d9534f; /* Rouge de la ligne d'inflexion */
+            border-radius: 5px;
+            margin: 15px auto 40px auto;
+            max-width: 120px;
+        }
+
+        .text-custom-blue { color: #5d8aa8; }
+        .text-custom-red { color: #d9534f; }
+
+        .badge-custom {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 5px;
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+        .badge-r { background-color: #5d8aa8 !important; } 
+        .badge-stats { background-color: #64bc9c !important; }
+        .badge-alert { background-color: #d9534f !important; }
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target="#mainNav" style="padding-top: 90px;">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html"); 
+  });
+</script>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+
+            <header class="text-center mb-5">
+                <h1 class="text-uppercase fw-bolder mb-3" style="color: #333;">Agriculture et Cancer (Agrican)</h1>
+                <hr class="section-divider">
+                <p class="mx-auto lead text-muted" style="max-width: 800px;">
+                    Analyse multivariée et segmentation des pratiques professionnelles de la cohorte 1960.
+                </p>
+            </header>
+
+            <div class="text-center mb-5">
+                <span class="badge-custom badge-r shadow-sm">Langage R</span>
+                <span class="badge-custom badge-stats shadow-sm">ACP</span>
+                <span class="badge-custom badge-stats shadow-sm">K-means</span>
+                <span class="badge-custom badge-alert shadow-sm">Épidémiologie</span>
+            </div>
+
+            <div class="project-content">
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-custom-blue">Présentation du projet</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #5d8aa8; border-width: 3px; margin-left: 0;">
+                    <p>
+                        Cette étude s'appuie sur la cohorte Agrican, la plus grande étude épidémiologique française sur le milieu agricole. L'objectif est de constituer des profils types d'agriculteurs selon les activités exercées durant leur carrière professionnelle (cultures, élevage, viticulture).
+                    </p>
+                    <p>
+                        La population d'intérêt comprend 12 310 individus de la sous-cohorte ayant débuté leur carrière entre 1950 et 1970.
+                    </p>
+                </article>
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-custom-blue">Méthodologie Statistique</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #5d8aa8; border-width: 3px; margin-left: 0;">
+                    <p>Le protocole d'analyse a été structuré en trois étapes clés sous R :</p>
+                    <ol>
+                        <li><b>Calcul des ratios de pratique :</b> Détermination de la durée de chaque activité par rapport à la durée totale de carrière.</li>
+                        <li><b>ACP (Analyse en Composantes Principales) :</b> Réduction dimensionnelle permettant de conserver 75,88% de l'information initiale via 7 axes factoriels.</li>
+                        <li><b>Clustering K-means :</b> Classification automatique pour regrouper les agriculteurs ayant des trajectoires similaires.</li>
+                    </ol>
+                </article>
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-custom-blue">Résultats et Profilage</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #5d8aa8; border-width: 3px; margin-left: 0;">
+                    <p>L'analyse a mis en lumière des spécialisations fortes au sein des groupes formés :</p>
+                    <ul>
+                        <li><b>Cluster 2 :</b> Dominé par l'élevage de bovins (94,08%).</li>
+                        <li><b>Cluster 6 :</b> Quasi-exclusivement dédié à la viticulture (96,99%).</li>
+                        <li><b>Comportements de santé :</b> Des disparités de tabagisme ont été observées, le cluster 5 présentant le taux de fumeurs le plus élevé (58%).</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h4 class="fw-bold fs-4 text-custom-red">Détermination du nombre de classes</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #d9534f; border-width: 3px; margin-left: 0;">
+                    <p>
+                        Pour identifier le nombre optimal de clusters, nous avons utilisé la méthode du coude. Le graphique montre une décroissance forte de l'inertie intra-classe, révélant un point d'inflexion notable.
+                    </p>
+                    <div class="text-center my-4">
+                        <img src="Image_projets/BUT2/agrican_class.png" 
+                             class="img-fluid rounded shadow-sm border" 
+                             style="max-width: 50%; height: auto;" 
+                             alt="Graphique de l'évolution de l'inertie">
+                        <p class="text-muted mt-2 small"><i>Figure : Courbe d'évolution de l'inertie d'interclasse (Méthode du coude)</i></p>
+                    </div>
+                </article>
+
+                <article class="content-card text-center" style="border-left: none; border-bottom: 5px solid #64bc9c;">
+                    <h4 class="fw-bold fs-4 mb-3">Accéder aux ressources</h4>
+                    <p>Retrouvez l'intégralité du rapport d'analyse complet.</p>
+                    
+                    <a href="https://github.com/Mandir24/AGRICAN/blob/main/Rapport.pdf"
+                    class="btn btn-outline-danger mx-2" target="_blank">
+                    <i class="fa fa-file-pdf-o me-2"></i> Rapport
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2026 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

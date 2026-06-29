@@ -1,37 +1,27 @@
-const buttons = document.querySelectorAll('#animated-buttons span');
-let current = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    const rotator = document.getElementById('word-rotator');
+    const words = rotator.getElementsByClassName('skill-badge');
+    const stepHeight = 40; // Doit être identique à la hauteur CSS
+    let currentIndex = 0;
 
-function typeWriter(element, text, link, callback) {
-  element.innerHTML = ''; // réinitialise le texte
-  element.classList.add('visible');
-  let i = 0;
+    // Pour un effet de boucle infinie fluide, on clone le premier mot à la fin
+    const firstClone = words[0].cloneNode(true);
+    rotator.appendChild(firstClone);
 
-  function typing() {
-    if (i < text.length) {
-      element.innerHTML = `<a class="btn btn-secondary btn-lg text-uppercase" href="${link}"><b>${text.slice(0, i + 1)}</b></a>`;
-      i++;
-      setTimeout(typing, 100); // vitesse d’écriture
-    } else {
-      setTimeout(() => {
-        element.classList.remove('visible');
-        callback(); // passe au suivant
-      }, 1000); // pause avant le bouton suivant
+    function slideNext() {
+        currentIndex++;
+        rotator.style.transition = "transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)";
+        rotator.style.transform = `translateY(-${currentIndex * stepHeight}px)`;
+
+        // Si on arrive au clone (fin), on réinitialise sans animation
+        if (currentIndex === words.length - 1) {
+            setTimeout(() => {
+                rotator.style.transition = "none";
+                rotator.style.transform = "translateY(0)";
+                currentIndex = 0;
+            }, 600); // Temps de l'animation
+        }
     }
-  }
 
-  typing();
-}
-
-function showNextButton() {
-  const btn = buttons[current];
-  const text = btn.dataset.text;
-  const link = btn.dataset.link;
-
-  typeWriter(btn, text, link, () => {
-    btn.innerHTML = ''; // nettoie après affichage
-    current = (current + 1) % buttons.length; // boucle
-    showNextButton();
-  });
-}
-
-showNextButton();
+    setInterval(slideNext, 2500); // Change de mot toutes les 2.5 secondes
+});

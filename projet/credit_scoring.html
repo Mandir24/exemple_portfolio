@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Projet Data Mining : Scoring Crédit pour l'Inclusion Financière - Modélisation prédictive avec XGBoost">
+  <meta name="author" content="Mandir DIOP">
+  <title>Projet Scoring Crédit - Mandir DIOP</title>
+  
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../img/logo/mandir_log.ico">
+  <link href="../css/agency.css" rel="stylesheet">
+  
+  <script src="../vendor/jquery/jquery.min.js"></script>
+
+  <style>
+    .project-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    @media (max-width: 992px) {
+      .project-img { max-width: 70%; display: block; margin: 0 auto; }
+    }
+    @media (max-width: 768px) {
+      .project-img { max-width: 100%; margin-bottom: 20px; }
+    }
+    .methodology-box {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    .step-title {
+      color: #7c7c7e;
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
+      font-size: 1.1rem;
+    }
+    .notebook-container {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+      background: #fff;
+    }
+    iframe { width: 100%; height: 700px; border: none; }
+    .section-divider { border: 0; height: 1px; background: #ddd; margin: 5px 0 15px 0; }
+    .main-divider { border: 0; height: 2px; background: #ddd; margin: -5px 0 20px 0; border-radius: 5px; }
+  </style>
+</head>
+
+<body id="page-top" style="padding-top: 90px;"> 
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav"></nav>
+  
+  <script>
+    $(function(){
+      $("#mainNav").load("../menu_projet.html");
+    });
+  </script>
+
+  <section id="projet-scoring" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-uppercase fw-bold">Scoring Crédit pour l'Inclusion Financière</h2>
+      <hr class="main-divider">
+
+      <div class="text-center mb-4">
+        <span class="badge badge-primary mx-1">Machine Learning</span>
+        <span class="badge badge-success mx-1">XGBoost</span>
+        <span class="badge badge-info mx-1">SMOTE</span>
+        <span class="badge badge-warning mx-1">Streamlit</span>
+        <span class="badge badge-secondary mx-1">Python</span>
+        <span class="badge badge-danger mx-1">Analyse de Risque</span>
+      </div>
+
+      <div class="text-center mb-5">
+        <img src="Image_projets/BUT3/scoring_banner.jpg" class="img-fluid rounded shadow project-img" style="max-width: 500px;">
+      </div>
+
+      <div class="mx-auto" style="max-width: 950px;">
+        <h4 class="fw-bold">Contexte</h4>
+        <hr class="main-divider">
+        <p>Réalisé dans le cadre du BUT Science des Données (IUT Caen Normandie, 2025-2026), ce projet consiste à prédire la solvabilité de clients ayant peu d'historique bancaire. L'enjeu majeur est de gérer un dataset fortement déséquilibré (92% de bons payeurs).</p>
+          <div class="text-center mt-2 mb-4">
+              <a href="https://prediction-emprunt.streamlit.app" class="btn-live-app" target="_blank">
+                  <div class="icon-container">
+                      <i class="fa fa-rocket"></i>
+                  </div>
+                  <div class="text-container">
+                      <small>Déploiement Cloud</small>
+                      Accéder à l'Application Live
+                  </div>
+              </a>
+          </div>
+
+        <h4 class="fw-bold mt-4">Objectifs du projet</h4>
+        <hr class="main-divider">
+        <ul>
+          <li>Fusionner et nettoyer des sources de données complexes.</li>
+          <li>Optimiser les performances via <strong>XGBoost</strong> et <strong>SMOTE</strong>.</li>
+          <li>Déployer une interface interactive avec <strong>Streamlit</strong>.</li>
+        </ul>
+
+        <div class="methodology-box shadow-sm">
+          <h4 class="fw-bold text-uppercase"><i class="fa fa-flask me-2"></i> Démarche Scientifique</h4>
+          <hr class="main-divider">
+          
+          <span class="step-title">1. Feature Engineering & Fusion</span>
+          <hr class="section-divider">
+          <p>Fusion complexe de plusieurs sources (Bureau, Previous Applications, POS_CASH) par identifiant client (SK_ID_CURR). Nettoyage des valeurs aberrantes et création de variables synthétiques comme le ratio d'endettement ou l'ancienneté d'emploi en années.</p>
+
+          <span class="step-title">2. Sélection et Entraînement des Modèles</span>
+          <hr class="section-divider">
+          <p>Comparaison de plusieurs algorithmes pour identifier le plus performant :
+            <ul>
+              <li><strong>Régression Logistique</strong> : Baseline pour la linéarité.</li>
+              <li><strong>Random Forest</strong> : Pour capturer les interactions complexes.</li>
+              <li><strong>XGBoost</strong> : Choisi comme modèle final pour sa précision supérieure (Boosting d'arbres) et sa rapidité de traitement.</li>
+            </ul>
+          </p>
+
+          <span class="step-title">3. Stratégie de Gestion du Déséquilibre</span>
+          <hr class="section-divider">
+          <p>Le dataset présentait seulement 8% de défauts de paiement. Pour éviter un modèle biaisé, nous avons appliqué une technique de sur-échantillonnage afin d'équilibrer les classes et améliorer la détection des profils à risque.</p>
+
+          <span class="step-title">4. Optimisation du Seuil Décisionnel</span>
+          <hr class="section-divider">
+          <p>Mise en place d'une <strong>fonction de coût métier</strong>. Le seuil optimal a été fixé à <strong>0.53</strong> pour minimiser les pertes financières, en considérant qu'un défaut non prédit coûte beaucoup plus cher qu'un refus de prêt injustifié.</p>
+        </div>
+        <h4 class="fw-bold mt-4">Résultats</h4>
+        <hr class="main-divider">
+        <div class="row text-center mb-4">
+          <div class="col-md-6 mb-3">
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #007bff;">
+              <strong>Modèle Final :</strong> XGBoost <br>
+              <strong>Score AUC :</strong> ~75%
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #28a745;">
+              <strong>Seuil de décision :</strong> 0.53 <br>
+              <strong>Optimisation :</strong> Seuil métier
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 mb-4">
+          <a href="https://github.com/Mandir24/scoring-credit-datamining" class="btn btn-outline-dark mx-2" target="_blank">
+            <i class="fa fa-github me-2"></i> Code GitHub
+          </a>
+
+          <button id="btnToggleCode" class="btn btn-outline-info mx-2" type="button" 
+                  data-toggle="collapse" data-target="#collapseNotebook" 
+                  aria-expanded="false" aria-controls="collapseNotebook">
+            <i class="fa fa-code me-2"></i> <span id="textToggle">Afficher le Code</span>
+          </button>
+
+          <a href="https://github.com/Mandir24/scoring-credit-datamining/blob/main/Projet_diade_data_mining.pdf" class="btn btn-outline-danger mx-2" target="_blank">
+            <i class="fa fa-file-pdf-o me-2"></i> Rapport
+          </a>
+        </div>
+
+        <div class="collapse" id="collapseNotebook">
+          <div class="notebook-container shadow-sm">
+            <div class="p-2 bg-light border-bottom small text-muted">
+              <i class="fa fa-info-circle me-1"></i> Aperçu interactif du script
+            </div>
+             <iframe src="https://nbviewer.org/github/Mandir24/scoring-credit-datamining/blob/main/codedatamining.ipynb"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2026 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="fa fa-phone me-1"></i> +33 7 80 85 66 34
+        </div>
+    </div>
+  </div>
+</footer>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // Switch du texte du bouton
+      $('#collapseNotebook').on('show.bs.collapse', function () {
+        $('#textToggle').text('Masquer le Code');
+      });
+      $('#collapseNotebook').on('hide.bs.collapse', function () {
+        $('#textToggle').text('Afficher le Code');
+      });
+    });
+  </script>
+</body>
+</html>

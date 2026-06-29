@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Analyse Élections 2024 | Mandir DIOP</title>
+    
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/agency.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <style>
+        .project-content { max-width: 950px; margin: 0 auto; }
+        
+        .section-divider {
+            height: 3px;
+            background: #69b3a2;
+            border-radius: 5px;
+            margin: 15px auto 40px auto;
+            max-width: 120px;
+            opacity: 0.8;
+        }
+
+        /* --- Nouveau Style des Badges --- */
+        .badge-tech-stack {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            margin: 5px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #1a1a1a;
+            background: #ffffff;
+            border: 2px solid #69b3a2;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px #69b3a2;
+        }
+
+        .badge-tech-stack:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #1a1a1a;
+            border-color: #1a1a1a;
+        }
+
+        .badge-tech-stack i {
+            margin-right: 8px;
+            color: #69b3a2;
+        }
+
+       /* Image principale avec effet */
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Carte discrète, agrandie et décalée */
+        .map-large-discreet {
+            width: 115%; /* Augmentation de la taille */
+            max-width: none;
+            border-radius: 8px;
+            opacity: 0.95;
+            margin-left: 20px; /* Décalage vers la droite */
+            transition: opacity 0.3s;
+        }
+        
+        .map-large-discreet:hover {
+            opacity: 1;
+        }
+
+        .highlight-card {
+            background: #fdfdfd;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid #eee;
+            border-left: 5px solid #69b3a2;
+        }
+        
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target="#mainNav" style="padding-top: 90px;">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav"></nav>
+<script>
+  $(function(){
+    $("#mainNav").load("../menu_projet.html"); 
+  });
+</script>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+
+            <header class="text-center mb-5">
+                <h1 class="text-uppercase fw-bolder mb-3">Analyse Statistique : Élections Européennes 2024</h1>
+                <hr class="section-divider">
+                <p class="mx-auto lead text-muted" style="max-width: 800px;">
+                    Analyse approfondie des <strong>81 sièges</strong> au Parlement européen avec un focus sur les disparités territoriales et le comportement électoral local.
+                </p>
+            </header>
+
+            <div class="text-center mb-5">
+                <div class="badge-tech-stack"><i class="fa fa-code"></i> R Studio</div>
+                <div class="badge-tech-stack"><i class="fa fa-database"></i> Tidyverse / Dplyr</div>
+                <div class="badge-tech-stack"><i class="fa fa-map-o"></i> SF (Spatial)</div>
+                <div class="badge-tech-stack"><i class="fa fa-file-text-o"></i> LaTeX</div>
+            </div>
+
+            <div class="project-content">
+                
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary">Préparation et Enrichissement des Données</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #69b3a2;">
+                    <p>
+                        Le projet repose sur l'exploitation des résultats définitifs par bureau de vote issus de <a href="https://www.data.gouv.fr/fr/datasets/resultats-des-elections-europeennes-du-9-juin-2024/" target="_blank" class="text-decoration-none text-primary fw-bold">data.gouv.fr</a>. 
+                        Pour pallier l'absence de dimensions géographiques complètes dans le jeu de données initial, un pipeline de traitement a été mis en place via une jointure complexe avec le 
+                        <a href="https://www.insee.fr/fr/information/6800675" target="_blank" class="text-decoration-none text-primary fw-bold">Code Officiel Géographique (COG) de l'INSEE</a>.
+                    </p>
+
+                    <div class="row align-items-center mt-4">
+                    <div class="col-lg-7">
+                        <div class="highlight-card bg-light border-start border-4 border-primary p-4 rounded-3 shadow-sm">
+                            <h6 class="fw-bold mb-4"><i class="fa fa-cogs me-2"></i> Pipeline Automatisé sous R</h6>
+                            
+                            <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                
+                                <div class="badge-tech-stack m-1">
+                                    <i class="fa fa-eraser"></i> Nettoyage (Tidyr)
+                                </div>
+                                
+                                <i class="fa fa-chevron-right text-muted mx-2 d-none d-md-block"></i>
+                                
+                                <div class="badge-tech-stack m-1">
+                                    <i class="fa fa-link"></i> Jointures COG (Dplyr)
+                                </div>
+                                
+                                <i class="fa fa-chevron-right text-muted mx-2 d-none d-md-block"></i>
+                                
+                                <div class="badge-tech-stack m-1" style="border-color: #2c3e50; box-shadow: 4px 4px 0px #2c3e50;">
+                                    <i class="fa fa-file-excel-o" style="color: #2c3e50;"></i> Export Multi-onglets
+                                </div>
+
+                            </div>
+
+                            <p class="small text-muted mt-4 mb-0">
+                                <i class="fa fa-check-circle text-success me-1"></i>
+                                <em>Résultat : Fichier <b>Elections.xlsx</b> structuré dynamiquement pour l'analyse locale.</em>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                        <img src="Image_projets/BUT2/dataset.png" 
+                            class="img-fluid map-large-discreet" 
+                            alt="Schéma préparation des données" 
+                            style="width: 90%; opacity: 0.9;">
+                    </div>
+                </div>
+
+                <br>
+
+
+                  <div class="text-center mb-5">
+                <img src="Image_projets/BUT2/graph8.png"
+                    class="img-fluid map-large-discreet" 
+                     style="max-width: 750px;"
+                     alt="Top 10 départements participation">
+            </div>
+
+                </article>
+
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary">Analyse de la Participation et des Clivages</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #69b3a2;">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="fw-bold fs-5">Dynamiques Nationales</h5>
+                            <p>L'analyse révèle des contrastes marqués : la <b>Bretagne (57,08%)</b> mène la participation régionale, tandis que la <b>Corse (43,25%)</b> enregistre le taux le plus faible.</p>
+                            
+                            <div class="text-center mt-3">
+                                <img src="Image_projets/BUT2/graph2.png" 
+                                    class="img-fluid map-large-discreet" 
+                                    alt="Classement des régions selon la participation"
+                                    style="width: 105%; margin-left: 0; opacity: 1;">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="fw-bold fs-5">Clivages Politiques</h5>
+                            <p>Le ratio RN/LFI souligne des fractures profondes. La <b>Meuse</b> présente le ratio le plus élevé (11,56), avec 44,50% pour le RN contre 3,85% pour LFI.</p>
+                            
+                            <div class="text-center mt-3">
+                                <img src="Image_projets/BUT2/graph10.png" 
+                                    class="img-fluid map-large-discreet" 
+                                    alt="Tableau ratio RN LFI par département"
+                                    style="width: 80%; margin-left: 0; opacity: 1;">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mb-5">
+                    <h4 class="fw-bold fs-4 text-primary">Focus Régional : Normandie</h4>
+                    <hr class="mb-3" style="max-width: 50px; border-color: #69b3a2;">
+                    <p>En Normandie, le <b>Calvados</b> se distingue avec le taux de participation le plus élevé (55,5%). L'analyse communale montre une concentration massive du vote socialiste à <b>Caen (7258 voix)</b>, surpassant largement les autres pôles urbains.</p>
+                 <div class="row align-items-center mt-4">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="position-relative">
+                <div class="">
+                            <img src="Image_projets/BUT2/departement.png" 
+                                 class="img-fluid map-discreet" 
+                                 alt="Carte de la participation par département">
+                        </div>
+               
+            </div>
+        </div>
+        
+                <div class="col-lg-5">
+                    <div class="highlight-card mt-0">
+                        <h6 class="fw-bold"><i class="fa fa-info-circle text-primary"></i> Indicateurs clés (14)</h6>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2">
+                                <span class="badge-tech-stack m-0 py-1 px-2" style="box-shadow: 2px 2px 0px #69b3a2;">Calvados</span> 
+                                <strong>55,5%</strong> <small class="text-muted">(Max)</small>
+                            </li>
+                            <li class="mb-2">
+                                <span class="badge-tech-stack m-0 py-1 px-2" style="box-shadow: 2px 2px 0px #69b3a2;">Eure</span> 
+                                <strong>53,8%</strong>
+                            </li>
+                            <li class="mb-2">
+                                <span class="badge-tech-stack m-0 py-1 px-2" style="box-shadow: 2px 2px 0px #69b3a2;">Seine-Maritime</span> 
+                                <strong>52,7%</strong> <small class="text-muted">(Min)</small>
+                            </li>
+                        </ul>
+                        <p class="small text-muted italic mt-3">
+                            Le dégradé de bleu souligne la corrélation entre les zones urbaines denses (Caen, Rouen) et la dynamique de mobilisation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </article>
+
+           
+
+                <div class="text-center mt-5">
+                    <a href="https://github.com/Mandir24/election-europeen/blob/main/Rapport/Rapport_groupe_07.pdf" class="btn btn-outline-danger mx-2" target="_blank">
+                        <i class="fa fa-file-pdf-o me-2"></i> Consulter le Rapport
+                    </a>
+                    <a href="https://github.com/Mandir24/election-europeen" class="btn btn-outline-dark mx-2" target="_blank">
+                        <i class="fa fa-github me-2"></i> Voir le Code R
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-light py-4 border-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <span class="copyright">Copyright &copy; 2026 Mandir DIOP</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons text-center my-3 my-md-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/Mandir24" title="Github" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/mandir-diop-92bab6276/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:diopmandir53@gmail.com" title="diopmandir53@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Tous droits réservés</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center text-muted small mt-2">
+            <i class="fa fa-map-marker me-1"></i> Lisieux, France | <i class="list-inline quicklinks"> + 33 7 80 85 66 34</i>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
